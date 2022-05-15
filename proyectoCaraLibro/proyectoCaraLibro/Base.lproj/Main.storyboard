@@ -32,36 +32,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bienvenido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPz-60-0yI">
-                                <rect key="frame" x="115" y="130" width="186" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPz-60-0yI">
+                                <rect key="frame" x="114" y="130" width="186" height="42"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onk-op-Ve9">
-                                <rect key="frame" x="48" y="209" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onk-op-Ve9">
+                                <rect key="frame" x="48" y="209" width="318" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OE2-qE-tuL">
-                                <rect key="frame" x="48" y="256" width="318" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OE2-qE-tuL">
+                                <rect key="frame" x="48" y="256" width="318" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Ld5-pu-SlJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkN-cq-lnu">
-                                <rect key="frame" x="48" y="325" width="139" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkN-cq-lnu">
+                                <rect key="frame" x="48" y="325" width="318" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XoR-7T-ozm">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XoR-7T-ozm">
                                 <rect key="frame" x="48" y="372" width="318" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -96,9 +94,12 @@
                                     <segue destination="Avb-3f-qeU" kind="show" id="Mut-Vp-uh8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qp-K5-tcQ">
-                                <rect key="frame" x="154" y="414" width="212" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qp-K5-tcQ">
+                                <rect key="frame" x="154" y="416" width="212" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="XxR-fL-EIM"/>
+                                    <constraint firstAttribute="width" constant="212" id="cTM-c7-qJ2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="¿Olvidaste tu contraseña?">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -110,12 +111,32 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="linkColor"/>
+                        <constraints>
+                            <constraint firstItem="XoR-7T-ozm" firstAttribute="leading" secondItem="OE2-qE-tuL" secondAttribute="leading" id="32Y-FQ-Oy3"/>
+                            <constraint firstItem="TkN-cq-lnu" firstAttribute="top" secondItem="OE2-qE-tuL" secondAttribute="bottom" constant="34" id="93G-EX-B8p"/>
+                            <constraint firstItem="TkN-cq-lnu" firstAttribute="leading" secondItem="onk-op-Ve9" secondAttribute="leading" id="Dj2-jV-OfC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="onk-op-Ve9" secondAttribute="trailing" constant="48" id="IFR-77-dqy"/>
+                            <constraint firstItem="dPz-60-0yI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="Llo-Gf-S47"/>
+                            <constraint firstItem="XoR-7T-ozm" firstAttribute="height" secondItem="OE2-qE-tuL" secondAttribute="height" multiplier="0.971429" id="MaN-TR-YED"/>
+                            <constraint firstItem="OE2-qE-tuL" firstAttribute="leading" secondItem="onk-op-Ve9" secondAttribute="leading" id="Mv5-6J-oPe"/>
+                            <constraint firstItem="OE2-qE-tuL" firstAttribute="top" secondItem="onk-op-Ve9" secondAttribute="bottom" constant="17" id="TWZ-jk-cfb"/>
+                            <constraint firstItem="1qp-K5-tcQ" firstAttribute="top" secondItem="XoR-7T-ozm" secondAttribute="bottom" constant="10" id="UIP-7j-7zm"/>
+                            <constraint firstItem="TkN-cq-lnu" firstAttribute="trailing" secondItem="onk-op-Ve9" secondAttribute="trailing" id="UZN-st-tOb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1qp-K5-tcQ" secondAttribute="trailing" constant="48" id="Xgz-uw-yIH"/>
+                            <constraint firstItem="onk-op-Ve9" firstAttribute="top" secondItem="dPz-60-0yI" secondAttribute="bottom" constant="37" id="ci6-EG-pdG"/>
+                            <constraint firstItem="onk-op-Ve9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="g7N-qK-5z2"/>
+                            <constraint firstItem="XoR-7T-ozm" firstAttribute="trailing" secondItem="OE2-qE-tuL" secondAttribute="trailing" id="gMw-lh-3fe"/>
+                            <constraint firstItem="dPz-60-0yI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="inC-ab-UrX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dPz-60-0yI" secondAttribute="trailing" constant="114" id="nUR-dN-qby"/>
+                            <constraint firstItem="XoR-7T-ozm" firstAttribute="top" secondItem="TkN-cq-lnu" secondAttribute="bottom" constant="17" id="yxY-s8-QM0"/>
+                            <constraint firstItem="OE2-qE-tuL" firstAttribute="trailing" secondItem="onk-op-Ve9" secondAttribute="trailing" id="zsh-rG-Go3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0pD-42-WdI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="59" y="129"/>
+            <point key="canvasLocation" x="57.971014492753625" y="128.57142857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aaJ-cg-iv1">
