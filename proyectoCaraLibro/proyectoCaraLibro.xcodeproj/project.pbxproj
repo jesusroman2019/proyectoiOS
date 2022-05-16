@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		CAB55B862830BEB200828AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB55B852830BEB200828AD5 /* AppDelegate.swift */; };
 		CAB55B882830BEB200828AD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB55B872830BEB200828AD5 /* SceneDelegate.swift */; };
-		CAB55B8A2830BEB200828AD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB55B892830BEB200828AD5 /* ViewController.swift */; };
 		CAB55B8D2830BEB200828AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB55B8B2830BEB200828AD5 /* Main.storyboard */; };
 		CAB55B8F2830BEBB00828AD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB55B8E2830BEBB00828AD5 /* Assets.xcassets */; };
 		CAB55B922830BEBB00828AD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB55B902830BEBB00828AD5 /* LaunchScreen.storyboard */; };
+		CAE5F8A92831C2A0003BD4CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5F8A82831C2A0003BD4CA /* LoginViewController.swift */; };
+		CAE5F8AC2831C33A003BD4CA /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5F8AB2831C33A003BD4CA /* NewUserViewController.swift */; };
+		CAE5F8AF2831C36F003BD4CA /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5F8AE2831C36F003BD4CA /* RecoverPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CAB55B822830BEB200828AD5 /* proyectoCaraLibro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proyectoCaraLibro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB55B852830BEB200828AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB55B872830BEB200828AD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CAB55B892830BEB200828AD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CAB55B8C2830BEB200828AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAB55B8E2830BEBB00828AD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAB55B912830BEBB00828AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAB55B932830BEBB00828AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAE5F8A82831C2A0003BD4CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CAE5F8AB2831C33A003BD4CA /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
+		CAE5F8AE2831C36F003BD4CA /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				CAB55B852830BEB200828AD5 /* AppDelegate.swift */,
 				CAB55B872830BEB200828AD5 /* SceneDelegate.swift */,
-				CAB55B892830BEB200828AD5 /* ViewController.swift */,
 				CAB55B8B2830BEB200828AD5 /* Main.storyboard */,
 				CAB55B8E2830BEBB00828AD5 /* Assets.xcassets */,
 				CAB55B902830BEBB00828AD5 /* LaunchScreen.storyboard */,
 				CAB55B932830BEBB00828AD5 /* Info.plist */,
+				CAE5F8A82831C2A0003BD4CA /* LoginViewController.swift */,
+				CAE5F8AB2831C33A003BD4CA /* NewUserViewController.swift */,
+				CAE5F8AE2831C36F003BD4CA /* RecoverPasswordViewController.swift */,
 			);
 			path = proyectoCaraLibro;
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB55B8A2830BEB200828AD5 /* ViewController.swift in Sources */,
+				CAE5F8AF2831C36F003BD4CA /* RecoverPasswordViewController.swift in Sources */,
+				CAE5F8A92831C2A0003BD4CA /* LoginViewController.swift in Sources */,
+				CAE5F8AC2831C33A003BD4CA /* NewUserViewController.swift in Sources */,
 				CAB55B862830BEB200828AD5 /* AppDelegate.swift in Sources */,
 				CAB55B882830BEB200828AD5 /* SceneDelegate.swift in Sources */,
 			);
