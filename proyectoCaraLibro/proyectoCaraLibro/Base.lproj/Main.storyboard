@@ -308,6 +308,7 @@
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="linkColor"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="gX2-1U-0ER" firstAttribute="leading" secondItem="UGU-d0-t8c" secondAttribute="leading" id="1ib-AJ-dnp"/>
                                             <constraint firstItem="OTn-bP-Qcc" firstAttribute="height" secondItem="gkT-Cc-3xL" secondAttribute="height" id="1m2-W8-MF1"/>
@@ -351,6 +352,11 @@
                                             <constraint firstItem="XOx-fs-dIW" firstAttribute="leading" secondItem="OTn-bP-Qcc" secondAttribute="leading" id="ulJ-90-dON"/>
                                             <constraint firstItem="MOx-RX-YqC" firstAttribute="trailing" secondItem="bjk-cJ-M6v" secondAttribute="trailing" id="vGv-AA-AEN"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="EYr-Pq-fpO" appends="YES" id="OIT-9e-UYp"/>
+                                            <outletCollection property="gestureRecognizers" destination="aJ8-8J-qWW" appends="YES" id="E5P-uk-ear"/>
+                                            <outletCollection property="gestureRecognizers" destination="CZb-6Q-YvU" appends="YES" id="nsB-oV-iG7"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -376,8 +382,26 @@
                     </view>
                     <navigationItem key="navigationItem" id="Wzj-K9-pxR"/>
                     <size key="freeformSize" width="414" height="896"/>
+                    <connections>
+                        <outlet property="txtName" destination="gkT-Cc-3xL" id="GZ1-48-4g9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rm2-4e-y32" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="EYr-Pq-fpO">
+                    <connections>
+                        <action selector="tapToCloseKeyboardWithSender:" destination="r99-n5-SmV" id="BeQ-Gf-4bP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="aJ8-8J-qWW">
+                    <connections>
+                        <action selector="swipeToOpenKeyboard:" destination="r99-n5-SmV" id="TT0-Pa-CCv"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="CZb-6Q-YvU">
+                    <connections>
+                        <action selector="swipeToCloseKeyboard:" destination="r99-n5-SmV" id="nbn-uS-Rhv"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="805.79710144927537" y="134.59821428571428"/>
         </scene>
