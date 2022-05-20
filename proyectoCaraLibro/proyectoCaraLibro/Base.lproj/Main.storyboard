@@ -383,6 +383,7 @@
                     <navigationItem key="navigationItem" id="Wzj-K9-pxR"/>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
+                        <outlet property="scrollView" destination="Lar-YI-n1o" id="YrA-Eh-lOK"/>
                         <outlet property="txtName" destination="gkT-Cc-3xL" id="GZ1-48-4g9"/>
                     </connections>
                 </viewController>
