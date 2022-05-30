@@ -1,5 +1,5 @@
 //
-//  RecoverPasswordViewController.swift
+//  NewUserViewController.swift
 //  proyectoCaraLibro
 //
 //  Created by user191022 on 5/29/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RecoverPasswordViewController: UIViewController {
+class NewUserViewController: UIViewController {
     
     @IBOutlet private weak var anchorBottomScroll: NSLayoutConstraint!
     
@@ -25,12 +25,18 @@ class RecoverPasswordViewController: UIViewController {
         self.unregisterKeyboardNotification()
     }
     
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        .portrait
+    }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        [.portrait, .landscapeRight]
+    }
 }
 
 
 //MARK: - Keyboard events
-extension RecoverPasswordViewController {
+extension NewUserViewController {
     
     private func registerKeyboardNotification() {
         NotificationCenter.default.addObserver(self,
