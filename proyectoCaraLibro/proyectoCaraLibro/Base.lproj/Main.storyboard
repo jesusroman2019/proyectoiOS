@@ -319,46 +319,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nB6-dT-6s5">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nB6-dT-6s5">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recuperar Contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6g-UE-n8J">
-                                        <rect key="frame" x="27" y="47" width="360" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuperar Contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6g-UE-n8J">
+                                        <rect key="frame" x="38" y="20" width="338" height="34"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correo Electrónico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rks-ge-tJ9">
-                                        <rect key="frame" x="38" y="220" width="338" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo Electrónico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rks-ge-tJ9">
+                                        <rect key="frame" x="38" y="180" width="338" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pls-Wh-XTy">
-                                        <rect key="frame" x="96" y="359" width="222" height="61"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa tu dirección de correo electrónico. Te enviaremos un enlace para que puedas crear una nueva contraseña." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iF-yV-d1p">
+                                        <rect key="frame" x="38" y="74" width="338" height="61"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GUg-Qh-D4L">
+                                        <rect key="frame" x="38" y="224" width="338" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="sdz-YP-6qQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tc6-9V-fMO">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="qcl-Yi-Ka3"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pls-Wh-XTy">
+                                        <rect key="frame" x="96" y="296" width="222" height="61"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61" id="W2Y-BF-RHr"/>
+                                            <constraint firstAttribute="width" constant="222" id="XSS-Iw-0Sa"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
                                         <state key="normal" title="Enviar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingresa tu dirección de correo electrónico. Te enviaremos un enlace para que puedas crear una nueva contraseña." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iF-yV-d1p">
-                                        <rect key="frame" x="38" y="115" width="338" height="61"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GUg-Qh-D4L">
-                                        <rect key="frame" x="38" y="264" width="338" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="pls-Wh-XTy" firstAttribute="top" secondItem="GUg-Qh-D4L" secondAttribute="bottom" constant="38" id="4I5-tP-7mK"/>
+                                    <constraint firstItem="GUg-Qh-D4L" firstAttribute="leading" secondItem="Rks-ge-tJ9" secondAttribute="leading" id="6eA-Aj-AZZ"/>
+                                    <constraint firstItem="Rks-ge-tJ9" firstAttribute="top" secondItem="3iF-yV-d1p" secondAttribute="bottom" constant="45" id="8Jb-uL-1VA"/>
+                                    <constraint firstItem="n6g-UE-n8J" firstAttribute="top" secondItem="Tc6-9V-fMO" secondAttribute="bottom" constant="20" id="9af-5N-4QE"/>
+                                    <constraint firstItem="Tc6-9V-fMO" firstAttribute="width" secondItem="nB6-dT-6s5" secondAttribute="width" id="In3-nO-M15"/>
+                                    <constraint firstItem="n6g-UE-n8J" firstAttribute="leading" secondItem="nB6-dT-6s5" secondAttribute="leading" constant="38" id="ItC-X2-ySV"/>
+                                    <constraint firstAttribute="trailing" secondItem="n6g-UE-n8J" secondAttribute="trailing" constant="38" id="MFa-2O-Y2g"/>
+                                    <constraint firstItem="3iF-yV-d1p" firstAttribute="top" secondItem="n6g-UE-n8J" secondAttribute="bottom" constant="20" id="Ns6-xC-w2c"/>
+                                    <constraint firstItem="GUg-Qh-D4L" firstAttribute="top" secondItem="Rks-ge-tJ9" secondAttribute="bottom" constant="20" id="QEe-zV-eaH"/>
+                                    <constraint firstItem="pls-Wh-XTy" firstAttribute="centerX" secondItem="nB6-dT-6s5" secondAttribute="centerX" id="RkI-pT-1QZ"/>
+                                    <constraint firstItem="Rks-ge-tJ9" firstAttribute="leading" secondItem="3iF-yV-d1p" secondAttribute="leading" id="XO3-0i-6Gq"/>
+                                    <constraint firstAttribute="bottom" secondItem="pls-Wh-XTy" secondAttribute="bottom" constant="451" id="ady-cZ-dEe"/>
+                                    <constraint firstItem="3iF-yV-d1p" firstAttribute="leading" secondItem="n6g-UE-n8J" secondAttribute="leading" id="dAs-Go-U3X"/>
+                                    <constraint firstItem="Rks-ge-tJ9" firstAttribute="trailing" secondItem="3iF-yV-d1p" secondAttribute="trailing" id="gLa-f1-qPg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tc6-9V-fMO" secondAttribute="trailing" id="hk1-kY-muH"/>
+                                    <constraint firstItem="Tc6-9V-fMO" firstAttribute="top" secondItem="nB6-dT-6s5" secondAttribute="top" id="iUk-pU-h0S"/>
+                                    <constraint firstItem="Tc6-9V-fMO" firstAttribute="leading" secondItem="nB6-dT-6s5" secondAttribute="leading" id="reS-Ev-Mja"/>
+                                    <constraint firstItem="3iF-yV-d1p" firstAttribute="trailing" secondItem="n6g-UE-n8J" secondAttribute="trailing" id="ufw-Kb-euC"/>
+                                    <constraint firstItem="GUg-Qh-D4L" firstAttribute="trailing" secondItem="Rks-ge-tJ9" secondAttribute="trailing" id="y59-fd-yer"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tRx-L4-WIa" appends="YES" id="oi4-ix-FHL"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RCg-wm-yEv"/>
@@ -373,10 +408,15 @@
                     <navigationItem key="navigationItem" id="Sqg-Vg-NfR"/>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
-                        <outlet property="txtEmail" destination="GUg-Qh-D4L" id="RlM-d7-Cdc"/>
+                        <outlet property="anchorBottomScroll" destination="2PG-2V-ZIh" id="NP8-E0-4nK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7n-ny-4ty" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tRx-L4-WIa">
+                    <connections>
+                        <action selector="tapToCloseKeyboardWithSender:" destination="eFF-hI-AWM" id="sWK-eC-PFf"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="805.79710144927537" y="849.77678571428567"/>
         </scene>

@@ -13,6 +13,7 @@
 		CAB55B8F2830BEBB00828AD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB55B8E2830BEBB00828AD5 /* Assets.xcassets */; };
 		CAB55B922830BEBB00828AD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB55B902830BEBB00828AD5 /* LaunchScreen.storyboard */; };
 		CACA9AD4284441A9006A5192 /* LoginUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACA9AD3284441A9006A5192 /* LoginUserViewController.swift */; };
+		CACA9AE028444B20006A5192 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACA9ADF28444B20006A5192 /* RecoverPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CAB55B912830BEBB00828AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAB55B932830BEBB00828AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CACA9AD3284441A9006A5192 /* LoginUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserViewController.swift; sourceTree = "<group>"; };
+		CACA9ADF28444B20006A5192 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				CAB55B902830BEBB00828AD5 /* LaunchScreen.storyboard */,
 				CAB55B932830BEBB00828AD5 /* Info.plist */,
 				CACA9AD3284441A9006A5192 /* LoginUserViewController.swift */,
+				CACA9ADF28444B20006A5192 /* RecoverPasswordViewController.swift */,
 			);
 			path = proyectoCaraLibro;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				CAB55B862830BEB200828AD5 /* AppDelegate.swift in Sources */,
 				CAB55B882830BEB200828AD5 /* SceneDelegate.swift in Sources */,
+				CACA9AE028444B20006A5192 /* RecoverPasswordViewController.swift in Sources */,
 				CACA9AD4284441A9006A5192 /* LoginUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
