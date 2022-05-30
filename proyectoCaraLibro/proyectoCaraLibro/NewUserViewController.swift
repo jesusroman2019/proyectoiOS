@@ -23,15 +23,8 @@ class NewUserViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.unregisterKeyboardNotification()
-    }
+    }    
     
-    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-        .portrait
-    }
-    
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        [.portrait, .landscapeRight]
-    }
 }
 
 
