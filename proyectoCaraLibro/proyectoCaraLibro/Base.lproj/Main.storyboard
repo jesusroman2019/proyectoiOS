@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-728" y="129"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Login User View Controller-->
         <scene sceneID="j7h-Ou-esV">
             <objects>
-                <viewController id="Iqw-wA-jO2" customClass="LoginViewController" customModule="proyectoCaraLibro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Iqw-wA-jO2" customClass="LoginUserViewController" customModule="proyectoCaraLibro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xtr-QX-erL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,6 +125,7 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="linkColor"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="PZL-4n-eUD" firstAttribute="leading" secondItem="b6e-uH-zIC" secondAttribute="leading" id="11y-aY-zJr"/>
                                     <constraint firstItem="d8d-QX-sIn" firstAttribute="leading" secondItem="PZL-4n-eUD" secondAttribute="leading" id="2HU-Zr-GcD"/>
@@ -155,9 +156,12 @@
                                     <constraint firstAttribute="trailing" secondItem="b6e-uH-zIC" secondAttribute="trailing" constant="48" id="pJs-zp-ECr"/>
                                     <constraint firstItem="osN-3S-KyV" firstAttribute="centerX" secondItem="xTl-MT-HFn" secondAttribute="centerX" id="sba-Wd-tXX"/>
                                     <constraint firstItem="78A-0T-EGk" firstAttribute="centerX" secondItem="xTl-MT-HFn" secondAttribute="centerX" id="vkK-ff-p4A"/>
-                                    <constraint firstAttribute="bottom" secondItem="osN-3S-KyV" secondAttribute="bottom" constant="226" id="xSf-xc-fE1"/>
+                                    <constraint firstAttribute="bottom" secondItem="osN-3S-KyV" secondAttribute="bottom" constant="20" id="xSf-xc-fE1"/>
                                     <constraint firstItem="1R0-9v-aM1" firstAttribute="leading" secondItem="nv8-E3-8dP" secondAttribute="leading" id="zGR-x9-qGd"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="RbT-cD-dSI" appends="YES" id="c4j-SF-lIP"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e4k-02-MDk"/>
@@ -171,8 +175,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="pIg-km-4Y0"/>
                     <size key="freeformSize" width="414" height="896"/>
+                    <connections>
+                        <outlet property="anchorBottomScroll" destination="qUv-Xq-ws6" id="Dir-pV-uEG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXh-2e-Zh5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="RbT-cD-dSI">
+                    <connections>
+                        <action selector="tapToCloseKeyboardWithSender:" destination="Iqw-wA-jO2" id="xEe-7J-YZL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="128.57142857142856"/>
         </scene>
