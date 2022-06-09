@@ -37,6 +37,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        logInButton.layer.cornerRadius = 15
         //self.HideKeyboard()
         
         NotificationCenter.default.addObserver(self, selector: #selector(Keyboard), name: UIResponder.keyboardWillHideNotification, object: nil)

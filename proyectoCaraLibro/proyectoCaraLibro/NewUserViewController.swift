@@ -15,6 +15,7 @@ class NewUserViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     
+    @IBOutlet weak var photoUpButton: UIButton!
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -40,7 +41,8 @@ class NewUserViewController: UIViewController, UITextFieldDelegate{
         NotificationCenter.default.addObserver(self, selector: #selector(Keyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(Keyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        
+           signUpButton.layer.cornerRadius = 15
+        photoUpButton.layer.cornerRadius = 15
     }
         
     
