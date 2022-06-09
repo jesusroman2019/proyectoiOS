@@ -79,6 +79,9 @@
                                                 <state key="normal" title="Iniciar Sesión">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="nGg-tS-COb" kind="show" id="HKt-Of-SiH"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PZL-4n-eUD">
                                                 <rect key="frame" x="48" y="239" width="318" height="34"/>
@@ -203,6 +206,22 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="49" y="129"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="tti-cc-JVL">
+            <objects>
+                <viewController id="nGg-tS-COb" customClass="MenuViewController" customModule="proyectoCaraLibro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kRw-T9-4cY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bMq-VX-Mdh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ePW-yW-ksI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pkr-qX-KxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="771" y="-540"/>
         </scene>
         <!--New User View Controller-->
         <scene sceneID="O4g-bh-qMG">

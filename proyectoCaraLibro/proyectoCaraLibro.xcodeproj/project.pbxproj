@@ -19,6 +19,7 @@
 		FA3B6A9D285186A7007AF878 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FA3B6A9C285186A7007AF878 /* FirebaseAnalytics */; };
 		FA3B6A9F285186A7007AF878 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA3B6A9E285186A7007AF878 /* FirebaseAnalyticsSwift */; };
 		FA3B6AA1285186A7007AF878 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FA3B6AA0285186A7007AF878 /* FirebaseAuth */; };
+		FA3B6AAA2851958D007AF878 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B6AA92851958D007AF878 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		CAE5F8AB2831C33A003BD4CA /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		CAE5F8AE2831C36F003BD4CA /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 		FA3B6A9828517FCD007AF878 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FA3B6AA92851958D007AF878 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				CAE5F8A82831C2A0003BD4CA /* LoginViewController.swift */,
 				CAE5F8AB2831C33A003BD4CA /* NewUserViewController.swift */,
 				CAE5F8AE2831C36F003BD4CA /* RecoverPasswordViewController.swift */,
+				FA3B6AA92851958D007AF878 /* MenuViewController.swift */,
 			);
 			path = proyectoCaraLibro;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE5F8AF2831C36F003BD4CA /* RecoverPasswordViewController.swift in Sources */,
+				FA3B6AAA2851958D007AF878 /* MenuViewController.swift in Sources */,
 				CAE5F8A92831C2A0003BD4CA /* LoginViewController.swift in Sources */,
 				CAE5F8AC2831C33A003BD4CA /* NewUserViewController.swift in Sources */,
 				CAB55B862830BEB200828AD5 /* AppDelegate.swift in Sources */,
