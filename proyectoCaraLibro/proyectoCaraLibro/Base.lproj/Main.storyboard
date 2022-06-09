@@ -315,6 +315,9 @@
                                                 <state key="normal" title="Crear Cuenta">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signUpButtonAction:" destination="r99-n5-SmV" eventType="touchUpInside" id="xMY-us-lAR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2r-H6-lMq">
                                                 <rect key="frame" x="96" y="529" width="222" height="48"/>
@@ -405,7 +408,10 @@
                     <navigationItem key="navigationItem" id="Wzj-K9-pxR"/>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
+                        <outlet property="emailTextField" destination="XOx-fs-dIW" id="b2d-BO-dxL"/>
+                        <outlet property="passwordTextField" destination="bjk-cJ-M6v" id="T71-zC-wHy"/>
                         <outlet property="scrollView" destination="Lar-YI-n1o" id="YrA-Eh-lOK"/>
+                        <outlet property="signUpButton" destination="WRS-lE-tDJ" id="SiQ-rI-YDI"/>
                         <outlet property="txtName" destination="gkT-Cc-3xL" id="GZ1-48-4g9"/>
                     </connections>
                 </viewController>
