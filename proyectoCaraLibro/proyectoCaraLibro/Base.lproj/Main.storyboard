@@ -80,13 +80,13 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="nGg-tS-COb" kind="show" id="HKt-Of-SiH"/>
+                                                    <action selector="signUpButtonAction:" destination="Iqw-wA-jO2" eventType="touchUpInside" id="SFv-5V-IjK"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PZL-4n-eUD">
                                                 <rect key="frame" x="48" y="239" width="318" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1R0-9v-aM1">
                                                 <rect key="frame" x="48" y="199" width="318" height="30"/>
@@ -100,7 +100,7 @@
                                                     <constraint firstAttribute="height" constant="34" id="caO-1o-rrh"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nv8-E3-8dP">
                                                 <rect key="frame" x="48" y="112" width="318" height="30"/>
@@ -184,6 +184,9 @@
                     <navigationItem key="navigationItem" id="pIg-km-4Y0"/>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
+                        <outlet property="emailTextField" destination="b6e-uH-zIC" id="kOu-Wg-eMJ"/>
+                        <outlet property="logInButton" destination="IDK-YR-usv" id="AEv-bu-dOS"/>
+                        <outlet property="passwordTextField" destination="PZL-4n-eUD" id="t90-6f-djb"/>
                         <outlet property="scrollView" destination="U1I-OB-oQp" id="sYm-L7-Vjr"/>
                         <outlet property="txtUser" destination="b6e-uH-zIC" id="yqf-NL-nME"/>
                     </connections>
@@ -265,7 +268,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XOx-fs-dIW">
                                                 <rect key="frame" x="48" y="291" width="318" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb0-ce-Owd">
                                                 <rect key="frame" x="14" y="25" width="386" height="42"/>
@@ -282,7 +285,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bjk-cJ-M6v">
                                                 <rect key="frame" x="48" y="377" width="318" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmar Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqN-aa-aee">
                                                 <rect key="frame" x="48" y="425" width="318" height="24"/>
@@ -293,7 +296,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOx-RX-YqC">
                                                 <rect key="frame" x="48" y="463" width="318" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V03-bn-uwX">
                                                 <rect key="frame" x="48" y="81" width="318" height="24"/>
