@@ -122,7 +122,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <color key="backgroundColor" red="0.0" green="0.68235294117647061" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="sbp-fe-jE7" firstAttribute="leading" secondItem="ELd-Rk-8es" secondAttribute="leading" constant="48" id="5ix-VO-U2e"/>
@@ -208,23 +208,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="49" y="129"/>
-        </scene>
-        <!--Menu View Controller-->
-        <scene sceneID="tti-cc-JVL">
-            <objects>
-                <viewController id="nGg-tS-COb" customClass="MenuViewController" customModule="proyectoCaraLibro" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kRw-T9-4cY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="bMq-VX-Mdh"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ePW-yW-ksI"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pkr-qX-KxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="771" y="-540"/>
+            <point key="canvasLocation" x="59" y="135"/>
         </scene>
         <!--New User View Controller-->
         <scene sceneID="O4g-bh-qMG">
@@ -332,7 +316,7 @@
                                                 </state>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <color key="backgroundColor" red="0.0" green="0.68235294120000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="gX2-1U-0ER" firstAttribute="leading" secondItem="UGU-d0-t8c" secondAttribute="leading" id="1ib-AJ-dnp"/>
@@ -488,7 +472,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <color key="backgroundColor" red="0.0" green="0.68235294120000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="n6g-UE-n8J" firstAttribute="leading" secondItem="nKg-Dm-2R9" secondAttribute="leading" constant="27" id="0kW-jt-SCh"/>
@@ -562,9 +546,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

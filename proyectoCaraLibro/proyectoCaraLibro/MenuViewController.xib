@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="proyectoCaraLibro" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="sb3-Jl-RPc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gws-VR-B6W">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yxc-vb-7fN">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMF-1O-bOs">
+                                    <rect key="frame" x="189.5" y="398.5" width="35" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.68235294120000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstItem="nMF-1O-bOs" firstAttribute="centerY" secondItem="Yxc-vb-7fN" secondAttribute="centerY" id="RfN-C4-gCn"/>
+                                <constraint firstItem="nMF-1O-bOs" firstAttribute="centerX" secondItem="Yxc-vb-7fN" secondAttribute="centerX" id="w2e-2S-T0H"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Yxc-vb-7fN" secondAttribute="bottom" id="FFR-Ck-mba"/>
+                        <constraint firstItem="Yxc-vb-7fN" firstAttribute="top" secondItem="Gws-VR-B6W" secondAttribute="top" id="YPN-cK-Y1U"/>
+                        <constraint firstItem="Yxc-vb-7fN" firstAttribute="leading" secondItem="Gws-VR-B6W" secondAttribute="leading" id="puL-GD-vcG"/>
+                        <constraint firstAttribute="trailing" secondItem="Yxc-vb-7fN" secondAttribute="trailing" id="tSk-2O-bWA"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="AXG-li-B1I"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Kj9-QY-oLE"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Gws-VR-B6W" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" id="5yR-jI-PRC"/>
+                <constraint firstItem="Gws-VR-B6W" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6fa-Xa-hre"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Gws-VR-B6W" secondAttribute="bottom" id="Aog-1T-Zk6"/>
+                <constraint firstItem="Yxc-vb-7fN" firstAttribute="width" secondItem="Gws-VR-B6W" secondAttribute="width" id="LBu-E2-hWr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Gws-VR-B6W" secondAttribute="trailing" id="SGV-HC-yRw"/>
+                <constraint firstItem="Yxc-vb-7fN" firstAttribute="height" secondItem="Gws-VR-B6W" secondAttribute="height" id="Ur5-kp-K7D"/>
+                <constraint firstItem="Gws-VR-B6W" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="cAo-Ly-uhU"/>
+                <constraint firstItem="Gws-VR-B6W" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="fqm-W2-kEw"/>
+            </constraints>
+            <point key="canvasLocation" x="-351" y="-282"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -37,7 +37,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        logInButton.layer.cornerRadius = 15
+        logInButton.layer.cornerRadius = 20
         //self.HideKeyboard()
         
         NotificationCenter.default.addObserver(self, selector: #selector(Keyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -80,7 +80,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                 (result, error) in
                 
                 if let result = result, error == nil{
-                    self.navigationController? .pushViewController(MenuViewController(), animated: true)
+                    self.navigationController?.pushViewController(MenuViewController(), animated: true)
                     
                 } else{
                     let alertController = UIAlertController(title: "Error", message: "Se ha producido un error", preferredStyle: .alert)

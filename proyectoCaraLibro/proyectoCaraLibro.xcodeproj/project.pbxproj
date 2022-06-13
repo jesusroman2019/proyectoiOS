@@ -20,6 +20,7 @@
 		FA3B6A9F285186A7007AF878 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA3B6A9E285186A7007AF878 /* FirebaseAnalyticsSwift */; };
 		FA3B6AA1285186A7007AF878 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FA3B6AA0285186A7007AF878 /* FirebaseAuth */; };
 		FA3B6AAA2851958D007AF878 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B6AA92851958D007AF878 /* MenuViewController.swift */; };
+		FA5DD4712856E6100083CA59 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5DD4702856E6100083CA59 /* MenuViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		CAE5F8AE2831C36F003BD4CA /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 		FA3B6A9828517FCD007AF878 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA3B6AA92851958D007AF878 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		FA5DD4702856E6100083CA59 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				CAB55B852830BEB200828AD5 /* AppDelegate.swift */,
 				CAB55B872830BEB200828AD5 /* SceneDelegate.swift */,
 				CAB55B8B2830BEB200828AD5 /* Main.storyboard */,
+				FA5DD4702856E6100083CA59 /* MenuViewController.xib */,
 				CAB55B8E2830BEBB00828AD5 /* Assets.xcassets */,
 				CAB55B902830BEBB00828AD5 /* LaunchScreen.storyboard */,
 				CAB55B932830BEBB00828AD5 /* Info.plist */,
@@ -152,6 +155,7 @@
 			files = (
 				CAB55B922830BEBB00828AD5 /* LaunchScreen.storyboard in Resources */,
 				FA3B6A9928517FCD007AF878 /* GoogleService-Info.plist in Resources */,
+				FA5DD4712856E6100083CA59 /* MenuViewController.xib in Resources */,
 				CAB55B8F2830BEBB00828AD5 /* Assets.xcassets in Resources */,
 				CAB55B8D2830BEB200828AD5 /* Main.storyboard in Resources */,
 			);
