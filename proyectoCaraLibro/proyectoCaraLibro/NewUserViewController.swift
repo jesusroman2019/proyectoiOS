@@ -14,6 +14,7 @@ class NewUserViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var password2TextField: UITextField!
     
     @IBOutlet weak var photoUpButton: UIButton!
     
@@ -75,6 +76,37 @@ class NewUserViewController: UIViewController, UITextFieldDelegate{
     }
 
     @IBAction func signUpButtonAction(_ sender: Any) {
+        if emailTextField.text?.isEmpty == true{
+            let alert = UIAlertController(title: "Error", message: "Debe ingresar un correo", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Enter Bales", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+            return
+        }
+        if passwordTextField.text?.isEmpty == true{
+            let alert = UIAlertController(title: "Error", message: "Debe ingresar una contrasena", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Enter Bales", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+            return
+        }
+        if password2TextField.text?.isEmpty == true{
+            let alert = UIAlertController(title: "Error", message: "Debe ingresar una contrasena", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Enter Bales", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+            return
+        }
+        if passwordTextField.text != password2TextField.text {
+            let alert = UIAlertController(title: "Error", message: "Las contrasenas deben coincidir", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Enter Bales", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        
+        login()
+    }
+    func login ()
+    {
+        
         if let email = emailTextField.text, let password = passwordTextField.text{
             Auth.auth().createUser(withEmail: email, password: password){
                 (result, error) in

@@ -393,6 +393,7 @@
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="emailTextField" destination="XOx-fs-dIW" id="b2d-BO-dxL"/>
+                        <outlet property="password2TextField" destination="MOx-RX-YqC" id="JC1-wC-Cq0"/>
                         <outlet property="passwordTextField" destination="bjk-cJ-M6v" id="T71-zC-wHy"/>
                         <outlet property="photoUpButton" destination="Y2r-H6-lMq" id="NIw-ep-iM0"/>
                         <outlet property="scrollView" destination="Lar-YI-n1o" id="YrA-Eh-lOK"/>
