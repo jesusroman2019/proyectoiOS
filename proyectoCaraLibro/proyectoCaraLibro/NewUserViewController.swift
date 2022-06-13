@@ -41,7 +41,7 @@ class NewUserViewController: UIViewController, UITextFieldDelegate{
         NotificationCenter.default.addObserver(self, selector: #selector(Keyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(Keyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-           signUpButton.layer.cornerRadius = 25
+           signUpButton.layer.cornerRadius = 15
         photoUpButton.layer.cornerRadius = 15
     }
         

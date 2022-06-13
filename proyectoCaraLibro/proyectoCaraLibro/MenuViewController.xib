@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="proyectoCaraLibro" customModuleProvider="target">
             <connections>
+                <outlet property="LogOutButton" destination="BGl-8s-0h8" id="Afh-zG-KSC"/>
                 <outlet property="view" destination="iN0-l3-epB" id="sb3-Jl-RPc"/>
             </connections>
         </placeholder>
@@ -24,18 +25,27 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yxc-vb-7fN">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMF-1O-bOs">
-                                    <rect key="frame" x="189.5" y="398.5" width="35" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGl-8s-0h8">
+                                    <rect key="frame" x="284" y="10" width="120" height="25"/>
+                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="120" id="55u-Gy-Mcm"/>
+                                        <constraint firstAttribute="height" constant="25" id="Nh0-6y-XZo"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                    <state key="normal" title="Cerrar Sesion">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="closeSessionButtonAction:" destination="-1" eventType="touchUpInside" id="udG-sj-URM"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.68235294120000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                             <gestureRecognizers/>
                             <constraints>
-                                <constraint firstItem="nMF-1O-bOs" firstAttribute="centerY" secondItem="Yxc-vb-7fN" secondAttribute="centerY" id="RfN-C4-gCn"/>
-                                <constraint firstItem="nMF-1O-bOs" firstAttribute="centerX" secondItem="Yxc-vb-7fN" secondAttribute="centerX" id="w2e-2S-T0H"/>
+                                <constraint firstItem="BGl-8s-0h8" firstAttribute="top" secondItem="Yxc-vb-7fN" secondAttribute="top" constant="10" id="TuJ-nd-sdu"/>
+                                <constraint firstAttribute="trailing" secondItem="BGl-8s-0h8" secondAttribute="trailing" constant="10" id="dfq-st-On7"/>
                             </constraints>
                         </view>
                     </subviews>
