@@ -76,6 +76,9 @@
                                         <state key="normal" title="Iniciar Sesión">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="ZMm-qy-XYO" kind="show" id="lh8-Hu-1pT"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PZL-4n-eUD">
                                         <rect key="frame" x="48" y="230" width="318" height="34"/>
@@ -189,6 +192,29 @@
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="128.57142857142856"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Xff-Rh-KMo">
+            <objects>
+                <viewController id="ZMm-qy-XYO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1hW-Cv-P5u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2i-58-TUl">
+                                <rect key="frame" x="160" y="176" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cerrar Sesion"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yuk-T7-6WK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IPc-1H-nfq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4JV-8x-NUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="-220"/>
+        </scene>
         <!--New User View Controller-->
         <scene sceneID="O4g-bh-qMG">
             <objects>
@@ -301,6 +327,9 @@
                                         <state key="normal" title="Crear Cuenta">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="e3p-Hz-cia" kind="show" id="KPh-dG-cHy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="linkColor"/>
@@ -382,7 +411,30 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="805.79710144927537" y="134.59821428571428"/>
+            <point key="canvasLocation" x="1959" y="149"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bpq-b8-Qyg">
+            <objects>
+                <viewController id="e3p-Hz-cia" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L6T-cv-GMf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyH-f0-PrY">
+                                <rect key="frame" x="160" y="211" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cerrar Sesion"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xN8-xo-833"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BPn-Ur-zuh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mvg-Wo-ZMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3129" y="153"/>
         </scene>
         <!--Recover Password View Controller-->
         <scene sceneID="gz2-kS-6vX">
@@ -439,6 +491,9 @@
                                         <state key="normal" title="Enviar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Qx4-4i-G5x" kind="show" id="DdG-tP-bHM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="linkColor"/>
@@ -492,6 +547,29 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="461" y="993"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l4J-Fn-LIR">
+            <objects>
+                <viewController id="Qx4-4i-G5x" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pkM-wa-Tcf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8n-As-Ael">
+                                <rect key="frame" x="160" y="208" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cerrar Sesion"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LZy-sw-8my"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2cp-LF-O7s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNC-gY-5Ka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1751" y="992"/>
         </scene>
     </scenes>
     <resources>

@@ -11,6 +11,7 @@
 		8C8EF90E285C061600B7AEC1 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8EF90D285C061600B7AEC1 /* FirebaseDatabase */; };
 		8C8EF910285C061600B7AEC1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8EF90F285C061600B7AEC1 /* FirebaseFirestore */; };
 		8C8EF913285C0CFD00B7AEC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C8EF912285C0CFD00B7AEC1 /* GoogleService-Info.plist */; };
+		8C8EF917285C25F100B7AEC1 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8EF916285C25F100B7AEC1 /* FirebaseAuthManager.swift */; };
 		CAB55B862830BEB200828AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB55B852830BEB200828AD5 /* AppDelegate.swift */; };
 		CAB55B882830BEB200828AD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB55B872830BEB200828AD5 /* SceneDelegate.swift */; };
 		CAB55B8D2830BEB200828AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB55B8B2830BEB200828AD5 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		8C8EF912285C0CFD00B7AEC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8C8EF916285C25F100B7AEC1 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		CAB55B822830BEB200828AD5 /* proyectoCaraLibro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proyectoCaraLibro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB55B852830BEB200828AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB55B872830BEB200828AD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				CACA9AD3284441A9006A5192 /* LoginUserViewController.swift */,
 				CACA9ADF28444B20006A5192 /* RecoverPasswordViewController.swift */,
 				CACA9AE328446086006A5192 /* NewUserViewController.swift */,
+				8C8EF916285C25F100B7AEC1 /* FirebaseAuthManager.swift */,
 			);
 			path = proyectoCaraLibro;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C8EF917285C25F100B7AEC1 /* FirebaseAuthManager.swift in Sources */,
 				CAB55B862830BEB200828AD5 /* AppDelegate.swift in Sources */,
 				CAB55B882830BEB200828AD5 /* SceneDelegate.swift in Sources */,
 				CACA9AE428446086006A5192 /* NewUserViewController.swift in Sources */,
