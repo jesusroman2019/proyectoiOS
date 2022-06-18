@@ -1,76 +1,57 @@
 //
-//  LoginUserViewController.swift
+//  HomeViewController.swift
 //  proyectoCaraLibro
 //
-//  Created by user191022 on 5/29/22.
+//  Created by user191554 on 6/17/22.
 //
 
 import UIKit
 import FirebaseAuth
 
-class LoginUserViewController: UIViewController {
+class HomeViewController: UIViewController {
     
-    @IBOutlet private weak var anchorBottomScroll: NSLayoutConstraint!
+    @IBOutlet private weak var closeButton: UIButton!
     
-    @IBOutlet private weak var emailTextField: UITextField!
-    @IBOutlet private weak var passwordTextField: UITextField!
-    @IBOutlet private weak var loginButton: UIButton!
-    
-    @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer) {
-        self.view.endEditing(true)
-    }
-    
-    @IBAction func logInButtonAction(_ sender: Any){
+    @IBAction func closeSessionButtonAction(_ sender: Any){
         
-        if let email = emailTextField.text, let password = passwordTextField.text
-        
-        {
-            Auth.auth().signIn(withEmail: email, password: password) {
-                (result, error) in
-                
-                if let result = result, error == nil {
-                    
-                    let storyBoard : UIStoryboard = UIStoryboard(name: "Second", bundle:nil)
-                    let resultViewController = storyBoard.instantiateViewController(withIdentifier: "contactos") as! HomeViewController
-                    self.navigationController?
-                        .pushViewController(resultViewController, animated: true)
-                        print(result)
-                } else {
-                    
-                    let alertController = UIAlertController(title: "Error",
-                        message:
-                        "Se ha producido un error",
-                            preferredStyle: .alert)
-                        alertController.addAction(UIAlertAction(title: "Aceptar",
-                            style: .default))
-                            
-                        self.present(alertController, animated: true, completion: nil)
-                }
-                
-            }
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popViewController(animated: true)
             
+        } catch{
+            //Se ha producido un error
         }
+        
     }
     
-    
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.setHidesBackButton(true, animated: false)
+        
+        // Guardar datos
+        /*
+        let defaults = UserDefaults.standard
+        defaults.setValue(email, forKey: "email")
+        defaults.synchronize()*/
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.registerKeyboardNotification()
+        //self.registerKeyboardNotification()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.unregisterKeyboardNotification()
+        //self.unregisterKeyboardNotification()
     }
     
     
 }
 
-
+/*
 //MARK: - Keyboard events
-extension LoginUserViewController {
+extension HomeViewController {
     
     private func registerKeyboardNotification() {
         NotificationCenter.default.addObserver(self,
@@ -108,3 +89,6 @@ extension LoginUserViewController {
         }
     }
 }
+*/
+
+

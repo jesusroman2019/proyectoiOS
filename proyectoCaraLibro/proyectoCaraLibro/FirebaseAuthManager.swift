@@ -10,5 +10,5 @@ import FirebaseAuth
 
 class FirebaseAuthManager{
     
-        
+    
 }

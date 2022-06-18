@@ -77,13 +77,13 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ZMm-qy-XYO" kind="show" id="lh8-Hu-1pT"/>
+                                            <action selector="logInButtonAction:" destination="Iqw-wA-jO2" eventType="touchUpInside" id="fpq-ZB-fyI"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PZL-4n-eUD">
                                         <rect key="frame" x="48" y="230" width="318" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1R0-9v-aM1">
                                         <rect key="frame" x="48" y="190" width="318" height="30"/>
@@ -181,6 +181,9 @@
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="anchorBottomScroll" destination="qUv-Xq-ws6" id="Dir-pV-uEG"/>
+                        <outlet property="emailTextField" destination="b6e-uH-zIC" id="0xZ-uy-v64"/>
+                        <outlet property="loginButton" destination="IDK-YR-usv" id="oFx-ck-sWv"/>
+                        <outlet property="passwordTextField" destination="PZL-4n-eUD" id="ZFR-jP-ckP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXh-2e-Zh5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -191,29 +194,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="128.57142857142856"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Xff-Rh-KMo">
-            <objects>
-                <viewController id="ZMm-qy-XYO" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1hW-Cv-P5u">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2i-58-TUl">
-                                <rect key="frame" x="160" y="176" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cerrar Sesion"/>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Yuk-T7-6WK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="IPc-1H-nfq"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4JV-8x-NUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="980" y="-220"/>
         </scene>
         <!--New User View Controller-->
         <scene sceneID="O4g-bh-qMG">
@@ -411,7 +391,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1959" y="149"/>
+            <point key="canvasLocation" x="1007" y="129"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bpq-b8-Qyg">
@@ -434,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvg-Wo-ZMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3129" y="153"/>
+            <point key="canvasLocation" x="1929" y="129"/>
         </scene>
         <!--Recover Password View Controller-->
         <scene sceneID="gz2-kS-6vX">
@@ -569,7 +549,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNC-gY-5Ka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1751" y="992"/>
+            <point key="canvasLocation" x="1345" y="992"/>
         </scene>
     </scenes>
     <resources>
