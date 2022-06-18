@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 
-class LoginUserViewController: UIViewController {
+class LoginUserViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet private weak var anchorBottomScroll: NSLayoutConstraint!
     
@@ -54,10 +54,17 @@ class LoginUserViewController: UIViewController {
     
     
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        emailTextField.text = ""
+        passwordTextField.text = ""
+        
+    }    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.registerKeyboardNotification()
+        textFieldDidBeginEditing(_ : emailTextField)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
