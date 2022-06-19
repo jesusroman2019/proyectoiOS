@@ -25,14 +25,14 @@ class NewUserViewController: UIViewController {
     @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
-    
+    /*
     func validateFields() -> String? {
         
         
         return nil
-    }
+    }*/
 
-
+// registro
     @IBAction func signUpButtonAction(_ sender: Any){
         
         if let name = nameTextField.text, let lastname = lastNameTextField.text, let email = emailTextField.text,
