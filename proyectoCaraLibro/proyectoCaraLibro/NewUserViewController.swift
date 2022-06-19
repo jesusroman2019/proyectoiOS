@@ -26,45 +26,40 @@ class NewUserViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    func validateFields() -> String? {
+        
+        
+        return nil
+    }
+
+
     @IBAction func signUpButtonAction(_ sender: Any){
         
-        if let email = emailTextField.text, let password = passwordTextField.text
-        
+        if let name = nameTextField.text, let lastname = lastNameTextField.text, let email = emailTextField.text,
+           let password = passwordTextField.text, let image = imageView.image
         {
-            Auth.auth().createUser(withEmail: email, password: password) {
-                (result, error) in
-                
-                if let result = result, error == nil {
-                    
-                    let storyBoard : UIStoryboard = UIStoryboard(name: "Second", bundle:nil)
-                    let resultViewController = storyBoard.instantiateViewController(withIdentifier: "contactos") as! HomeViewController
-                    self.navigationController?
-                        .pushViewController(resultViewController, animated: true)
-                        print(result)
-                } else {
-                    
-                    let alertController = UIAlertController(title: "Error",
-                        message:
-                        "Se ha producido un error",
-                            preferredStyle: .alert)
-                        alertController.addAction(UIAlertAction(title: "Aceptar",
-                            style: .default))
-                            
-                        self.present(alertController, animated: true, completion: nil)
-                }
-                
-            }
+            let ref = Database.database().reference()
+            guard let key = ref.child("users").childByAutoId().key else { return }
+            let user = ["uid": userID,
+                        "name": name,
+                        "lastname": lastname,
+                        "email": email,
+                        "password": password,
+                        "photo": image]
+            let childUpdates = ["/users/\(key)": user,
+                                "/user-users/\(userID)/\(key)/": user]
+            ref.updateChildValues(childUpdates)
             
-        }
-        
+           }
+           
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let ref = Database.database().reference()
+        //let ref = Database.database().reference()
         
-        ref.child("users").setValue(["email":"test1@gmail.com","password":"654321"])
+        //ref.child("users").setValue(["email":"test1@gmail.com","password":"654321"])
         
         //ref.childByAutoId().setValue(["email":"test1@gmail.com","password":"654321"])
         
