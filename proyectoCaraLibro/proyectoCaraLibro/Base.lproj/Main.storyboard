@@ -308,6 +308,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="signUpButtonAction:" destination="r99-n5-SmV" eventType="touchUpInside" id="PR6-9V-1ed"/>
                                             <segue destination="e3p-Hz-cia" kind="show" id="KPh-dG-cHy"/>
                                         </connections>
                                     </button>
@@ -382,6 +383,14 @@
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="anchorBottomScroll" destination="lm1-95-MTO" id="4BU-Wx-wQi"/>
+                        <outlet property="btnAddPhotoButton" destination="9z0-yf-B6A" id="Pcm-gd-UuM"/>
+                        <outlet property="btnSaveButton" destination="WRS-lE-tDJ" id="OAW-bO-3Dc"/>
+                        <outlet property="confirmPasswordTextField" destination="MOx-RX-YqC" id="SoR-17-YhS"/>
+                        <outlet property="emailTextField" destination="XOx-fs-dIW" id="Dyh-ma-xtS"/>
+                        <outlet property="imageView" destination="o9L-2W-wpm" id="f8H-g2-Hxo"/>
+                        <outlet property="lastNameTextField" destination="OTn-bP-Qcc" id="B5g-wa-BjT"/>
+                        <outlet property="nameTextField" destination="gkT-Cc-3xL" id="hnu-iF-oXV"/>
+                        <outlet property="passwordTextField" destination="bjk-cJ-M6v" id="RwK-og-xdP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rm2-4e-y32" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
