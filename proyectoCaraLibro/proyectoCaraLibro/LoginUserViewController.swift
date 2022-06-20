@@ -7,14 +7,21 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseCore
+import FirebaseFirestore
+import Firebase
 
 class LoginUserViewController: UIViewController, UITextFieldDelegate{
+    
+    
+    //private let db = Firestore.firestore()
     
     @IBOutlet private weak var anchorBottomScroll: NSLayoutConstraint!
     
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var loginButton: UIButton!
+   
     
     @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
@@ -23,33 +30,34 @@ class LoginUserViewController: UIViewController, UITextFieldDelegate{
     @IBAction func logInButtonAction(_ sender: Any){
         
         if let email = emailTextField.text, let password = passwordTextField.text
-        
-        {
-            Auth.auth().signIn(withEmail: email, password: password) {
-                (result, error) in
                 
-                if let result = result, error == nil {
-                    
-                    let storyBoard : UIStoryboard = UIStoryboard(name: "Second", bundle:nil)
-                    let resultViewController = storyBoard.instantiateViewController(withIdentifier: "contactos") as! HomeViewController
-                    self.navigationController?
-                        .pushViewController(resultViewController, animated: true)
-                        print(result)
-                } else {
-                    
-                    let alertController = UIAlertController(title: "Error",
-                        message:
-                        "Se ha producido un error",
-                            preferredStyle: .alert)
-                        alertController.addAction(UIAlertAction(title: "Aceptar",
-                            style: .default))
+                {
+                    Auth.auth().signIn(withEmail: email, password: password) {
+                        (result, error) in
+                        
+                        if let result = result, error == nil {
                             
-                        self.present(alertController, animated: true, completion: nil)
+                            let storyBoard : UIStoryboard = UIStoryboard(name: "Second", bundle:nil)
+                            let resultViewController = storyBoard.instantiateViewController(withIdentifier: "contactos") as! HomeViewController
+                            self.navigationController?
+                                .pushViewController(resultViewController, animated: true)
+                                print(result)
+                        } else {
+                            
+                            let alertController = UIAlertController(title: "Error",
+                                message:
+                                "Falta ingresar el correo y/o password.",
+                                    preferredStyle: .alert)
+                                alertController.addAction(UIAlertAction(title: "Aceptar",
+                                    style: .default))
+                                    
+                                self.present(alertController, animated: true, completion: nil)
+                        }
+                        
+                    }
+                    
                 }
-                
-            }
-            
-        }
+
     }
     
     

@@ -7,10 +7,13 @@
 
 import UIKit
 import FirebaseAuth
-import FirebaseDatabase
+import FirebaseCore
+import FirebaseFirestore
+import Firebase
 
-class NewUserViewController: UIViewController {
+class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPopoverControllerDelegate{
     
+    private let db = Firestore.firestore()
     @IBOutlet private weak var anchorBottomScroll: NSLayoutConstraint!
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -22,46 +25,72 @@ class NewUserViewController: UIViewController {
     @IBOutlet weak var btnAddPhotoButton: UIButton!
     @IBOutlet weak var btnSaveButton: UIButton!
     
+    let imagePicker = UIImagePickerController()
+    
     @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
-    /*
-    func validateFields() -> String? {
-        
-        
-        return nil
-    }*/
+    
+    
 
 // registro
     @IBAction func signUpButtonAction(_ sender: Any){
         
-        if let name = nameTextField.text, let lastname = lastNameTextField.text, let email = emailTextField.text,
-           let password = passwordTextField.text, let image = imageView.image
-        {
-            let ref = Database.database().reference()
-            guard let key = ref.child("users").childByAutoId().key else { return }
-            let user = ["uid": userID,
-                        "name": name,
-                        "lastname": lastname,
-                        "email": email,
-                        "password": password,
-                        "photo": image]
-            let childUpdates = ["/users/\(key)": user,
-                                "/user-users/\(userID)/\(key)/": user]
-            ref.updateChildValues(childUpdates)
+        let correo = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        let nombre = nameTextField.text ?? ""
+        let apellido = lastNameTextField.text ?? ""
+        //let foto = imageView.image
+        
+        Auth.auth().createUser(withEmail: correo, password: password) { (authResult, error) in
+                    if error == nil{
+                        self.db.collection("usuarios").document(correo).setData([
+                                                                            "nombre":nombre,
+                                                                            "apellidos":apellido,
+                            //"foto":foto!
+                        ])
+                        let alertController = UIAlertController(title: "Mesaje", message: "Registro con exito", preferredStyle: UIAlertController.Style.alert)
+                        
+                        let closeAction = UIAlertAction (title: "Aceptar", style: .cancel, handler: self.signUpButtonAction(_:))
+                        alertController.addAction(closeAction)
+                        self.present(alertController, animated: true, completion: nil)
+                    
+                        
+                    }else{
+                        //self.showAlertWithTitle("Error", message: "Error en el Registro", accept: "Aceptar")
+                    }
             
-           }
-           
+        }
+        
     }
     
+    @IBAction func loadImageButtonTapped(_ sender: UIButton) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+            
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    // MARK: - UIImagePickerControllerDelegate Methods
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            imageView.contentMode = .scaleAspectFit
+            imageView.image = pickedImage
+        }
+
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         
-        //let ref = Database.database().reference()
-        
-        //ref.child("users").setValue(["email":"test1@gmail.com","password":"654321"])
-        
-        //ref.childByAutoId().setValue(["email":"test1@gmail.com","password":"654321"])
+        imagePicker.delegate = self
         
     }
     
