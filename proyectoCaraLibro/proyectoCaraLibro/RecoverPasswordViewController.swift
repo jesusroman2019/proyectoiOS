@@ -26,11 +26,16 @@ class RecoverPasswordViewController: UIViewController {
                     if error == nil{
                         let alertController = UIAlertController(title: "Mensaje", message: "Correo enviado", preferredStyle: UIAlertController.Style.alert)
                         
-                        let closeAction = UIAlertAction (title: "Aceptar", style: .cancel, handler: self.btnRecoverPassword(_:))
+                        let closeAction = UIAlertAction (title: "Aceptar", style: .cancel/*, handler: self.btnRecoverPassword(_:)*/)
                         alertController.addAction(closeAction)
                         self.present(alertController, animated: true, completion: nil)
                     }else{
-                        //self.showAlertWithTitle("Error", message: "Correo no valido", accept: "Aceptar")
+                        
+                        let alertController = UIAlertController(title: "Error", message: "Correo no valido", preferredStyle: .alert)
+                                                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                                                    
+                                                self.present(alertController, animated: true, completion: nil)
+                        
                     }
                 }
         
@@ -38,7 +43,6 @@ class RecoverPasswordViewController: UIViewController {
         
         
     }
-    
     
     
     

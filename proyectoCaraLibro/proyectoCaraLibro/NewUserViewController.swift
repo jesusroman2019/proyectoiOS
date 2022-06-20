@@ -51,7 +51,7 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
                         ])
                         let alertController = UIAlertController(title: "Mesaje", message: "Registro con exito", preferredStyle: UIAlertController.Style.alert)
                         
-                        let closeAction = UIAlertAction (title: "Aceptar", style: .cancel, handler: self.signUpButtonAction(_:))
+                        let closeAction = UIAlertAction (title: "Aceptar", style: .cancel/*, handler: self.signUpButtonAction(_:)*/)
                         alertController.addAction(closeAction)
                         self.present(alertController, animated: true, completion: nil)
                     
