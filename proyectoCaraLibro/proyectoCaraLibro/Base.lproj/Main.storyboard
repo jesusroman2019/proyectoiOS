@@ -251,7 +251,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bjk-cJ-M6v">
                                         <rect key="frame" x="48" y="361" width="318" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmar Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqN-aa-aee">
                                         <rect key="frame" x="48" y="409" width="318" height="24"/>
@@ -262,7 +262,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOx-RX-YqC">
                                         <rect key="frame" x="48" y="447" width="318" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V03-bn-uwX">
                                         <rect key="frame" x="48" y="65" width="318" height="24"/>
@@ -312,7 +312,6 @@
                                         </state>
                                         <connections>
                                             <action selector="signUpButtonAction:" destination="r99-n5-SmV" eventType="touchUpInside" id="PR6-9V-1ed"/>
-                                            <segue destination="e3p-Hz-cia" kind="show" id="KPh-dG-cHy"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -405,29 +404,6 @@
             </objects>
             <point key="canvasLocation" x="1007" y="129"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="bpq-b8-Qyg">
-            <objects>
-                <viewController id="e3p-Hz-cia" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="L6T-cv-GMf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyH-f0-PrY">
-                                <rect key="frame" x="160" y="211" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cerrar Sesion"/>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="xN8-xo-833"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="BPn-Ur-zuh"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mvg-Wo-ZMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1929" y="129"/>
-        </scene>
         <!--Recover Password View Controller-->
         <scene sceneID="gz2-kS-6vX">
             <objects>
@@ -484,7 +460,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Qx4-4i-G5x" kind="show" id="DdG-tP-bHM"/>
+                                            <action selector="btnRecoverPassword:" destination="eFF-hI-AWM" eventType="touchUpInside" id="AN9-Tz-I6A"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -529,6 +505,7 @@
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="anchorBottomScroll" destination="2PG-2V-ZIh" id="NP8-E0-4nK"/>
+                        <outlet property="emailTextField" destination="GUg-Qh-D4L" id="CrU-fs-Rjf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7n-ny-4ty" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -538,30 +515,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="461" y="993"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="l4J-Fn-LIR">
-            <objects>
-                <viewController id="Qx4-4i-G5x" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pkM-wa-Tcf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8n-As-Ael">
-                                <rect key="frame" x="160" y="208" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cerrar Sesion"/>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="LZy-sw-8my"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="2cp-LF-O7s"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DNC-gY-5Ka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1345" y="992"/>
+            <point key="canvasLocation" x="491" y="893"/>
         </scene>
     </scenes>
     <resources>

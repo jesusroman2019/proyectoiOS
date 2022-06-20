@@ -6,14 +6,41 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RecoverPasswordViewController: UIViewController {
     
+    @IBOutlet weak var emailTextField: UITextField!
+
     @IBOutlet private weak var anchorBottomScroll: NSLayoutConstraint!
     
     @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
+    
+    @IBAction func btnRecoverPassword(_ sender: Any){
+        
+        let correo = emailTextField.text ?? ""
+        
+        Auth.auth().sendPasswordReset(withEmail: correo) { (error) in
+                    if error == nil{
+                        let alertController = UIAlertController(title: "Mensaje", message: "Correo enviado", preferredStyle: UIAlertController.Style.alert)
+                        
+                        let closeAction = UIAlertAction (title: "Aceptar", style: .cancel, handler: self.btnRecoverPassword(_:))
+                        alertController.addAction(closeAction)
+                        self.present(alertController, animated: true, completion: nil)
+                    }else{
+                        //self.showAlertWithTitle("Error", message: "Correo no valido", accept: "Aceptar")
+                    }
+                }
+        
+        
+        
+        
+    }
+    
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
