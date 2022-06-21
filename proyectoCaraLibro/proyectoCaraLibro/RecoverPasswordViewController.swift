@@ -7,6 +7,9 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseCore
+import FirebaseFirestore
+import Firebase
 
 class RecoverPasswordViewController: UIViewController {
     

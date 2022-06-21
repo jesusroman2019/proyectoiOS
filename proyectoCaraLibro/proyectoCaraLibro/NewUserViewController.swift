@@ -10,10 +10,17 @@ import FirebaseAuth
 import FirebaseCore
 import FirebaseFirestore
 import Firebase
+import FirebaseStorage
 
-class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPopoverControllerDelegate{
+
+class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPopoverControllerDelegate, UIApplicationDelegate{
     
     private let db = Firestore.firestore()
+   
+    
+    let storage = Storage.storage()
+    //let storageRef = storage.reference()
+    
     @IBOutlet private weak var anchorBottomScroll: NSLayoutConstraint!
     
     @IBOutlet weak var nameTextField: UITextField!
