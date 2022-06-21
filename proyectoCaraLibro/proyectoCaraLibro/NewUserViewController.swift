@@ -48,7 +48,7 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
         let password = passwordTextField.text ?? ""
         let nombre = nameTextField.text ?? ""
         let apellido = lastNameTextField.text ?? ""
-        //let foto = imageView.image
+        let path = "images/\(UUID().uuidString).jpg"
         
         Auth.auth().createUser(withEmail: correo, password: password) { (authResult, error) in
                     if error == nil{
@@ -56,8 +56,8 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
                                                                             "nombre":nombre,
                                                                             "apellidos":apellido,
                                                                             "uid": authResult!.user.uid,
-                                                                            "correo":correo
-                            //"foto":foto!
+                                                                            "correo":correo,
+                                                                            "url":path
                         ])
                         let alertController = UIAlertController(title: "Mesaje", message: "Registro con exito", preferredStyle: UIAlertController.Style.alert)
                         
