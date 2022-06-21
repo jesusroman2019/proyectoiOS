@@ -36,6 +36,7 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
 // registro
     @IBAction func signUpButtonAction(_ sender: Any){
         
+        let documentUUID = UUID().uuidString
         let correo = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         let nombre = nameTextField.text ?? ""
@@ -44,9 +45,11 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
         
         Auth.auth().createUser(withEmail: correo, password: password) { (authResult, error) in
                     if error == nil{
-                        self.db.collection("usuarios").document(correo).setData([
+                        self.db.collection("usuarios").document(documentUUID).setData([
                                                                             "nombre":nombre,
                                                                             "apellidos":apellido,
+                                                                            "uid": authResult!.user.uid,
+                                                                            "correo":correo
                             //"foto":foto!
                         ])
                         let alertController = UIAlertController(title: "Mesaje", message: "Registro con exito", preferredStyle: UIAlertController.Style.alert)
