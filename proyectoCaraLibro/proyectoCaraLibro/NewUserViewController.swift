@@ -75,29 +75,21 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
     }
     
     @IBAction func loadImageButtonTapped(_ sender: UIButton) {
+        
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
             
         present(imagePicker, animated: true, completion: nil)
     }
     
-    @objc
-        func PickImage()
-        {
-            let imagepicker = UIImagePickerController()
-            imagepicker.delegate = self
-            imagepicker.sourceType = .photoLibrary
-            imagepicker.allowsEditing = true
-            
-            present(imagepicker, animated: true, completion: nil)
-              
-        }
+  
+
     // MARK: - UIImagePickerControllerDelegate Methods
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            //if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.UploadImage(image: pickedImage)
-            
             imageView.contentMode = .scaleAspectFit
             imageView.image = pickedImage
         }
