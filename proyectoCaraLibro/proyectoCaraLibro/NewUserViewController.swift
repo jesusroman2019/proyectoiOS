@@ -105,12 +105,29 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
     
     func UploadImage(image: UIImage)
         {
-            let storageref = Storage.storage().reference()
-            let imagenode = storageref.child("\(UUID().uuidString)")
-            
-            imagenode.putData(image.pngData()!)
-            
+        
+                let storageref = Storage.storage().reference()
+                let imagenode = storageref.child("images/\(UUID().uuidString).jpg")
+        
+        let data = image.jpegData(compressionQuality: 0.2)
+                let metadata = StorageMetadata()
+                metadata.contentType = "image/jpg"
+                
+                if let data = data {
+                        imagenode.putData(data, metadata: metadata) { (metadata, error) in
+                                if let error = error {
+                                        print("Error while uploading file: ", error)
+                                }
+
+                                if let metadata = metadata {
+                                        print("Metadata: ", metadata)
+                                }
+                        }
                 }
+                
+                        //imagenode.putData(image.pngData()!)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
