@@ -18,8 +18,6 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
     private let db = Firestore.firestore()
    
     
-    let storage = Storage.storage()
-    //let storageRef = storage.reference()
     
     @IBOutlet private weak var anchorBottomScroll: NSLayoutConstraint!
     
@@ -33,6 +31,8 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
     @IBOutlet weak var btnSaveButton: UIButton!
     
     let imagePicker = UIImagePickerController()
+    
+    
     
     @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
@@ -81,10 +81,23 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
         present(imagePicker, animated: true, completion: nil)
     }
     
+    @objc
+        func PickImage()
+        {
+            let imagepicker = UIImagePickerController()
+            imagepicker.delegate = self
+            imagepicker.sourceType = .photoLibrary
+            imagepicker.allowsEditing = true
+            
+            present(imagepicker, animated: true, completion: nil)
+              
+        }
     // MARK: - UIImagePickerControllerDelegate Methods
-
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.UploadImage(image: pickedImage)
+            
             imageView.contentMode = .scaleAspectFit
             imageView.image = pickedImage
         }
@@ -96,9 +109,22 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
         dismiss(animated: true, completion: nil)
     }
     
+
+    
+    func UploadImage(image: UIImage)
+        {
+            let storageref = Storage.storage().reference()
+            let imagenode = storageref.child("\(UUID().uuidString)")
+            
+            imagenode.putData(image.pngData()!)
+            
+                }
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
+        
+        //let storage = Storage.storage()
+        //let storageRef = storage.reference()
         
         imagePicker.delegate = self
         
