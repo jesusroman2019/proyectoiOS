@@ -14,7 +14,6 @@ import Firebase
 class LoginUserViewController: UIViewController, UITextFieldDelegate{
     
     
-    //private let db = Firestore.firestore()
     
     @IBOutlet private weak var anchorBottomScroll: NSLayoutConstraint!
     
@@ -28,6 +27,24 @@ class LoginUserViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func logInButtonAction(_ sender: Any){
+        
+        guard let email = self.emailTextField.text, email.count != 0 else {
+            
+            let alertController = UIAlertController(title: "Error", message:
+                    "Ingrese un correo", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+                return
+                        }
+                guard let password = self.passwordTextField.text, password.count != 0 else {
+                    let alertController = UIAlertController(title: "Error", message:
+                            "Ingrese un password", preferredStyle: .alert)
+                        alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+
+                        self.present(alertController, animated: true, completion: nil)
+                    return
+                }
         
         if let email = emailTextField.text, let password = passwordTextField.text
                 

@@ -23,8 +23,16 @@ class RecoverPasswordViewController: UIViewController {
     
     @IBAction func btnRecoverPassword(_ sender: Any){
         
-        let correo = emailTextField.text ?? ""
+        //let correo = emailTextField.text ?? ""
         
+        guard let correo = self.emailTextField.text, correo.count != 0 else {
+            let alertController = UIAlertController(title: "Error", message:
+                    "Ingrese un correo", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+            return
+                        }
         Auth.auth().sendPasswordReset(withEmail: correo) { (error) in
                     if error == nil{
                         let alertController = UIAlertController(title: "Mensaje", message: "Correo enviado", preferredStyle: UIAlertController.Style.alert)

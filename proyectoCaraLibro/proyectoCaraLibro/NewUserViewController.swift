@@ -61,7 +61,7 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
                         ])
                         let alertController = UIAlertController(title: "Mesaje", message: "Registro con exito", preferredStyle: UIAlertController.Style.alert)
                         
-                        let closeAction = UIAlertAction (title: "Aceptar", style: .cancel/*, handler: self.signUpButtonAction(_:)*/)
+                        let closeAction = UIAlertAction (title: "Aceptar", style: .cancel, handler: self.goBack(_:))
                         alertController.addAction(closeAction)
                         self.present(alertController, animated: true, completion: nil)
                     
@@ -73,6 +73,10 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
         }
         
     }
+    
+    @IBAction func goBack(_ sender: Any) {
+              self.navigationController?.popToRootViewController(animated: true)
+         }
     
     @IBAction func loadImageButtonTapped(_ sender: UIButton) {
         
