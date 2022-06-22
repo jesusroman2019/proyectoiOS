@@ -43,11 +43,74 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
 // registro
     @IBAction func signUpButtonAction(_ sender: Any){
         
+        guard let nombre = self.nameTextField.text, nombre.count != 0 else {
+            let alertController = UIAlertController(title: "Error", message:
+                    "Ingrese su nombre, por favor.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+            return
+                        }
+        
+        guard let apellido = self.lastNameTextField.text, apellido.count != 0 else {
+            let alertController = UIAlertController(title: "Error", message:
+                    "Ingrese sus apellidos, por favor.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+                            return
+                        }
+        
+        guard let correo = self.emailTextField.text, correo.count != 0 else {
+            let alertController = UIAlertController(title: "Error", message:
+                    "Ingrese su correo, por favor.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+                            return
+                        }
+        
+        guard let password = self.passwordTextField.text, password.count != 0 else {
+            let alertController = UIAlertController(title: "Error", message:
+                    "Ingrese su password, por favor.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+                            return
+                        }
+        
+        guard let confirmPassword = self.confirmPasswordTextField.text, confirmPassword.count != 0 else {
+            let alertController = UIAlertController(title: "Error", message:
+                    "Ingrese el mismo password otra vez, por favor.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+                            return
+                        }
+        
+        if password != confirmPassword {
+            let alertController = UIAlertController(title: "Error", message:
+                    "La confirmacion de password debe coincidir con el password, por favor.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+            return
+                }
+        
+        guard let foto = self.imageView.image, foto.images == nil else{
+            let alertController = UIAlertController(title: "Error", message:
+                    "Ingrese una foto, por favor.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+                            return
+                        }
+        
         let documentUUID = UUID().uuidString
-        let correo = emailTextField.text ?? ""
-        let password = passwordTextField.text ?? ""
-        let nombre = nameTextField.text ?? ""
-        let apellido = lastNameTextField.text ?? ""
+        //let correo = emailTextField.text ?? ""
+        //let password = passwordTextField.text ?? ""
+        //let nombre = nameTextField.text ?? ""
+        //let apellido = lastNameTextField.text ?? ""
         let path = "images/\(UUID().uuidString).jpg"
         
         Auth.auth().createUser(withEmail: correo, password: password) { (authResult, error) in
@@ -67,8 +130,13 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
                     
                         
                     }else{
-                        //self.showAlertWithTitle("Error", message: "Error en el Registro", accept: "Aceptar")
-                    }
+                      
+                        let alertController = UIAlertController(title: "Error", message:
+                                "Error en el Registro.", preferredStyle: .alert)
+                            alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+
+                            self.present(alertController, animated: true, completion: nil)
+                                        return                    }
             
         }
         
