@@ -63,7 +63,7 @@ class LoginUserViewController: UIViewController, UITextFieldDelegate{
                             
                             let alertController = UIAlertController(title: "Error",
                                 message:
-                                "Falta ingresar el correo y/o password.",
+                                "Correo y/o password incorrectos.",
                                     preferredStyle: .alert)
                                 alertController.addAction(UIAlertAction(title: "Aceptar",
                                     style: .default))
