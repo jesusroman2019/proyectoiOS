@@ -97,14 +97,16 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
             return
                 }
         
-        guard let foto = self.imageView.image, foto.images == nil else{
+        
+        /*
+        guard let foto = self.imageView.image, foto.size.width == 0 else{
             let alertController = UIAlertController(title: "Error", message:
                     "Ingrese una foto, por favor.", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
 
                 self.present(alertController, animated: true, completion: nil)
                             return
-                        }
+                        }*/
         
         let documentUUID = UUID().uuidString
         //let correo = emailTextField.text ?? ""
