@@ -29,7 +29,7 @@ class RecoverPasswordViewController: UIViewController {
                     if error == nil{
                         let alertController = UIAlertController(title: "Mensaje", message: "Correo enviado", preferredStyle: UIAlertController.Style.alert)
                         
-                        let closeAction = UIAlertAction (title: "Aceptar", style: .cancel/*, handler: self.btnRecoverPassword(_:)*/)
+                        let closeAction = UIAlertAction (title: "Aceptar", style: .cancel, handler: self.goBack(_:))
                         alertController.addAction(closeAction)
                         self.present(alertController, animated: true, completion: nil)
                     }else{
@@ -47,6 +47,9 @@ class RecoverPasswordViewController: UIViewController {
         
     }
     
+    @IBAction func goBack(_ sender: Any) {
+              self.navigationController?.popToRootViewController(animated: true)
+         }
     
     
     override func viewWillAppear(_ animated: Bool) {
