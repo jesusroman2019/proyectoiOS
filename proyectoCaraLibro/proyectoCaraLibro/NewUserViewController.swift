@@ -32,7 +32,9 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
     
     let imagePicker = UIImagePickerController()
     
-    let documentUUID = UUID().uuidString
+    let documentUUID = UUID().uuidString    
+    
+    
     
     @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
