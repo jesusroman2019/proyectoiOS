@@ -32,7 +32,7 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
     
     let imagePicker = UIImagePickerController()
     
-    
+    let documentUUID = UUID().uuidString
     
     @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
@@ -132,13 +132,13 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
                 }
         
         
-        let documentUUID = UUID().uuidString
+        //let documentUUID = UUID().uuidString
         //let path = "images/\(UUID().uuidString).jpg"
-        let path = "images/profile_photo.jpg"
+        let path = "images/\(documentUUID)/profile_photo.jpg"
         
         Auth.auth().createUser(withEmail: correo, password: password) { (authResult, error) in
                     if error == nil{
-                        self.db.collection("usuarios").document(documentUUID).setData([
+                        self.db.collection("usuarios").document(self.documentUUID).setData([
                                                                             "nombre":nombre,
                                                                             "apellidos":apellido,
                                                                             "uid": authResult!.user.uid,
@@ -203,7 +203,7 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
         
                 let storageref = Storage.storage().reference()
                 //let imagenode = storageref.child("images/\(UUID().uuidString).jpg")
-                let imagenode = storageref.child("images/profile_photo.jpg")
+                let imagenode = storageref.child("images/\(documentUUID)/profile_photo.jpg")
         
         let data = image.jpegData(compressionQuality: 0.2)
                 let metadata = StorageMetadata()
