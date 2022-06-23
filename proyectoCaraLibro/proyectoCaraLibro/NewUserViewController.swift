@@ -132,22 +132,9 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
                 }
         
         
-        /*
-        guard let foto = self.imageView.image, foto.size.width == 0 else{
-            let alertController = UIAlertController(title: "Error", message:
-                    "Ingrese una foto, por favor.", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
-
-                self.present(alertController, animated: true, completion: nil)
-                            return
-                        }*/
-        
         let documentUUID = UUID().uuidString
-        //let correo = emailTextField.text ?? ""
-        //let password = passwordTextField.text ?? ""
-        //let nombre = nameTextField.text ?? ""
-        //let apellido = lastNameTextField.text ?? ""
-        let path = "images/\(UUID().uuidString).jpg"
+        //let path = "images/\(UUID().uuidString).jpg"
+        let path = "images/profile_photo.jpg"
         
         Auth.auth().createUser(withEmail: correo, password: password) { (authResult, error) in
                     if error == nil{
@@ -215,7 +202,8 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
         {
         
                 let storageref = Storage.storage().reference()
-                let imagenode = storageref.child("images/\(UUID().uuidString).jpg")
+                //let imagenode = storageref.child("images/\(UUID().uuidString).jpg")
+                let imagenode = storageref.child("images/profile_photo.jpg")
         
         let data = image.jpegData(compressionQuality: 0.2)
                 let metadata = StorageMetadata()
