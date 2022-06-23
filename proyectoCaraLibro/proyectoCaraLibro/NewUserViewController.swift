@@ -38,10 +38,17 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
         self.view.endEditing(true)
     }
     
+    func isValidEmail(emailID:String) -> Bool {
+       let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+       let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+       return emailTest.evaluate(with: emailID)
+   }
     
 
 // registro
     @IBAction func signUpButtonAction(_ sender: Any){
+        
+       
         
         guard let nombre = self.nameTextField.text, nombre.count != 0 else {
             let alertController = UIAlertController(title: "Error", message:
@@ -69,6 +76,16 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
                 self.present(alertController, animated: true, completion: nil)
                             return
                         }
+        
+        if isValidEmail(emailID: correo) == false {
+            let alertController = UIAlertController(title: "Error", message:
+                    "Ingrese un correo valido, por favor.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+                            return
+            
+        }
         
         guard let password = self.passwordTextField.text, password.count != 0 else {
             let alertController = UIAlertController(title: "Error", message:
@@ -190,7 +207,7 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
                 if let data = data {
                         imagenode.putData(data, metadata: metadata) { (metadata, error) in
                                 if let error = error {
-                                        print("Error while uploading file: ", error)
+                                        print("Error al subir la foto: ", error)
                                 }
 
                                 if let metadata = metadata {
