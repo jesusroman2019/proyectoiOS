@@ -44,6 +44,12 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
        return emailTest.evaluate(with: emailID)
    }
     
+    
+    func isPasswordValid(password : String) -> Bool{
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+        return passwordTest.evaluate(with: password)
+    }
+    
 
 // registro
     @IBAction func signUpButtonAction(_ sender: Any){
@@ -95,6 +101,17 @@ class NewUserViewController: UIViewController ,UIAlertViewDelegate,UIImagePicker
                 self.present(alertController, animated: true, completion: nil)
                             return
                         }
+        
+        if isPasswordValid(password : password) == false {
+            let alertController = UIAlertController(title: "Error", message:
+                    "El password debe contener una letra, un caracter especial y tener 8 caraacteres minimo, por favor.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+                            return
+            
+        }
+        
         
         guard let confirmPassword = self.confirmPasswordTextField.text, confirmPassword.count != 0 else {
             let alertController = UIAlertController(title: "Error", message:
