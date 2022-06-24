@@ -85,6 +85,7 @@
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PZL-4n-eUD">
                                         <rect key="frame" x="48" y="230" width="318" height="34"/>
+                                        <color key="backgroundColor" red="0.93147208120000002" green="0.93147208120000002" blue="0.93147208120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
@@ -96,6 +97,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6e-uH-zIC">
                                         <rect key="frame" x="48" y="143" width="318" height="34"/>
+                                        <color key="backgroundColor" red="0.93147208121827407" green="0.93147208121827407" blue="0.93147208121827407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="RME-ld-2Fc"/>
                                         </constraints>
@@ -114,7 +116,7 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applelogo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="osN-3S-KyV">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="osN-3S-KyV">
                                         <rect key="frame" x="132" y="536" width="150" height="150"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -131,7 +133,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.57831738887045936" green="1" blue="0.6172364293856899" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="PZL-4n-eUD" firstAttribute="leading" secondItem="b6e-uH-zIC" secondAttribute="leading" id="11y-aY-zJr"/>
@@ -211,6 +213,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gkT-Cc-3xL">
                                         <rect key="frame" x="48" y="103" width="318" height="34"/>
+                                        <color key="backgroundColor" red="0.93147208120000002" green="0.93147208120000002" blue="0.93147208120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="nBZ-ZX-ueN"/>
                                         </constraints>
@@ -225,6 +228,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTn-bP-Qcc">
                                         <rect key="frame" x="48" y="189" width="318" height="34"/>
+                                        <color key="backgroundColor" red="0.93147208120000002" green="0.93147208120000002" blue="0.93147208120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -236,6 +240,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XOx-fs-dIW">
                                         <rect key="frame" x="48" y="275" width="318" height="34"/>
+                                        <color key="backgroundColor" red="0.93147208120000002" green="0.93147208120000002" blue="0.93147208120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -253,6 +258,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bjk-cJ-M6v">
                                         <rect key="frame" x="48" y="361" width="318" height="34"/>
+                                        <color key="backgroundColor" red="0.93147208120000002" green="0.93147208120000002" blue="0.93147208120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
@@ -264,6 +270,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOx-RX-YqC">
                                         <rect key="frame" x="48" y="447" width="318" height="34"/>
+                                        <color key="backgroundColor" red="0.93147208120000002" green="0.93147208120000002" blue="0.93147208120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
@@ -318,7 +325,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.57831738889999995" green="1" blue="0.61723642940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="V03-bn-uwX" firstAttribute="top" secondItem="qb0-ce-Owd" secondAttribute="bottom" constant="13" id="4QB-Q0-d6k"/>
@@ -438,6 +445,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GUg-Qh-D4L">
                                         <rect key="frame" x="38" y="224" width="338" height="34"/>
+                                        <color key="backgroundColor" red="0.93147208120000002" green="0.93147208120000002" blue="0.93147208120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="sdz-YP-6qQ"/>
                                         </constraints>
@@ -467,7 +475,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.57831738889999995" green="1" blue="0.61723642940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="pls-Wh-XTy" firstAttribute="top" secondItem="GUg-Qh-D4L" secondAttribute="bottom" constant="38" id="4I5-tP-7mK"/>
@@ -523,7 +531,7 @@
     </scenes>
     <color key="tintColor" systemColor="systemIndigoColor"/>
     <resources>
-        <image name="applelogo" catalog="system" width="103" height="128"/>
+        <image name="Image" width="60" height="60"/>
         <image name="person.2.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
