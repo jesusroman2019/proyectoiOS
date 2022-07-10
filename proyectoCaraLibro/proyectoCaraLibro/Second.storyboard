@@ -503,6 +503,84 @@
             </objects>
             <point key="canvasLocation" x="1132" y="49"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="zG8-OX-Zyp">
+            <objects>
+                <viewController id="gIt-VE-KnS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jnb-oJ-6pp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orM-Mq-9J9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQn-Ec-Ojk">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="JwV-iT-dB0"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="chevron.left" catalog="system"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xel-8L-nWV">
+                                        <rect key="frame" x="184.5" y="10" width="45.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstItem="rQn-Ec-Ojk" firstAttribute="leading" secondItem="orM-Mq-9J9" secondAttribute="leading" id="9Do-iU-SUB"/>
+                                    <constraint firstAttribute="height" constant="44" id="LG9-jo-LgL"/>
+                                    <constraint firstItem="Xel-8L-nWV" firstAttribute="centerX" secondItem="orM-Mq-9J9" secondAttribute="centerX" id="Mvg-pV-Yu5"/>
+                                    <constraint firstAttribute="bottom" secondItem="rQn-Ec-Ojk" secondAttribute="bottom" id="Srs-ZN-Opv"/>
+                                    <constraint firstItem="Xel-8L-nWV" firstAttribute="centerY" secondItem="orM-Mq-9J9" secondAttribute="centerY" id="oJw-k4-txf"/>
+                                    <constraint firstItem="rQn-Ec-Ojk" firstAttribute="top" secondItem="orM-Mq-9J9" secondAttribute="top" id="pyf-RH-j1o"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sig-vd-sqO">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cerrar Sesion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xie-36-kdO">
+                                        <rect key="frame" x="134.5" y="8.5" width="145" height="27"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="xie-36-kdO" firstAttribute="centerX" secondItem="sig-vd-sqO" secondAttribute="centerX" id="CGP-uL-1TO"/>
+                                    <constraint firstItem="xie-36-kdO" firstAttribute="centerY" secondItem="sig-vd-sqO" secondAttribute="centerY" id="Jza-Zh-BTZ"/>
+                                    <constraint firstAttribute="height" constant="44" id="s2R-PT-yZq"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vQV-YE-tA7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="730"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k9D-pf-okO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="orM-Mq-9J9" firstAttribute="top" secondItem="k9D-pf-okO" secondAttribute="top" id="2tx-7Z-zdl"/>
+                            <constraint firstItem="k9D-pf-okO" firstAttribute="trailing" secondItem="orM-Mq-9J9" secondAttribute="trailing" id="8Vt-Jr-FLS"/>
+                            <constraint firstItem="sig-vd-sqO" firstAttribute="top" secondItem="vQV-YE-tA7" secondAttribute="bottom" id="EoS-j9-g1f"/>
+                            <constraint firstItem="vQV-YE-tA7" firstAttribute="top" secondItem="orM-Mq-9J9" secondAttribute="bottom" id="EqE-TE-Lr3"/>
+                            <constraint firstItem="k9D-pf-okO" firstAttribute="bottom" secondItem="sig-vd-sqO" secondAttribute="bottom" id="JvY-0r-ZCV"/>
+                            <constraint firstItem="k9D-pf-okO" firstAttribute="trailing" secondItem="vQV-YE-tA7" secondAttribute="trailing" id="OeP-xj-B9A"/>
+                            <constraint firstItem="sig-vd-sqO" firstAttribute="leading" secondItem="k9D-pf-okO" secondAttribute="leading" id="P3V-bq-I7n"/>
+                            <constraint firstItem="k9D-pf-okO" firstAttribute="trailing" secondItem="sig-vd-sqO" secondAttribute="trailing" id="hnH-wb-Hll"/>
+                            <constraint firstItem="orM-Mq-9J9" firstAttribute="leading" secondItem="k9D-pf-okO" secondAttribute="leading" id="vxZ-Oc-fYI"/>
+                            <constraint firstItem="vQV-YE-tA7" firstAttribute="leading" secondItem="k9D-pf-okO" secondAttribute="leading" id="yls-vP-ED9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjB-02-byn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857.9710144927537" y="48.883928571428569"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
