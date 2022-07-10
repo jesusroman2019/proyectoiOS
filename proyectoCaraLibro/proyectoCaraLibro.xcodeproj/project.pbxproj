@@ -11,6 +11,7 @@
 		8C3AC189285D756800FA6E7A /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C3AC188285D756800FA6E7A /* Second.storyboard */; };
 		8C8EF913285C0CFD00B7AEC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C8EF912285C0CFD00B7AEC1 /* GoogleService-Info.plist */; };
 		8C8EF917285C25F100B7AEC1 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8EF916285C25F100B7AEC1 /* FirebaseAuthManager.swift */; };
+		8C9FBF90287A57930009F090 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9FBF8F287A57930009F090 /* ContactTableViewCell.swift */; };
 		8CB6B4B82861682A00E837FF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8CB6B4B72861682A00E837FF /* FirebaseAnalytics */; };
 		8CB6B4BA2861682A00E837FF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8CB6B4B92861682A00E837FF /* FirebaseStorage */; };
 		8CB6B4BC2861682A00E837FF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8CB6B4BB2861682A00E837FF /* FirebaseAuth */; };
@@ -31,6 +32,7 @@
 		8C3AC188285D756800FA6E7A /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 		8C8EF912285C0CFD00B7AEC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C8EF916285C25F100B7AEC1 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		8C9FBF8F287A57930009F090 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		CAB55B822830BEB200828AD5 /* proyectoCaraLibro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proyectoCaraLibro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB55B852830BEB200828AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB55B872830BEB200828AD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				8C8EF916285C25F100B7AEC1 /* FirebaseAuthManager.swift */,
 				8C3AC185285D69BE00FA6E7A /* HomeViewController.swift */,
 				8C3AC188285D756800FA6E7A /* Second.storyboard */,
+				8C9FBF8F287A57930009F090 /* ContactTableViewCell.swift */,
 			);
 			path = proyectoCaraLibro;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				CAB55B862830BEB200828AD5 /* AppDelegate.swift in Sources */,
 				CAB55B882830BEB200828AD5 /* SceneDelegate.swift in Sources */,
 				CACA9AE428446086006A5192 /* NewUserViewController.swift in Sources */,
+				8C9FBF90287A57930009F090 /* ContactTableViewCell.swift in Sources */,
 				CACA9AE028444B20006A5192 /* RecoverPasswordViewController.swift in Sources */,
 				8C3AC186285D69BE00FA6E7A /* HomeViewController.swift in Sources */,
 				CACA9AD4284441A9006A5192 /* LoginUserViewController.swift in Sources */,

@@ -12,6 +12,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet private weak var closeButton: UIButton!
     
+    @IBOutlet private weak var tlvContacts: UITableView!
+    
     @IBAction func closeSessionButtonAction(_ sender: Any){
         
         do {
@@ -34,6 +36,9 @@ class HomeViewController: UIViewController {
         let defaults = UserDefaults.standard
         defaults.setValue(email, forKey: "email")
         defaults.synchronize()*/
+        
+        self.tlvContacts.dataSource = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +54,17 @@ class HomeViewController: UIViewController {
     
 }
 
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 15
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "pepito", for: indexPath)
+        return cell
+    }
+    
+}
 /*
 //MARK: - Keyboard events
 extension HomeViewController {
