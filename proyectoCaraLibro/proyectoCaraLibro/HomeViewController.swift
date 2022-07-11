@@ -39,6 +39,8 @@ class HomeViewController: UIViewController {
         
         self.tlvContacts.dataSource = self
         
+        let ws = ContactWS()
+        ws.getAllContacts()
     }
     
     override func viewWillAppear(_ animated: Bool) {

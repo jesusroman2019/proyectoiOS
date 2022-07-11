@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C2662AB287BA7500086093F /* ContactWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2662AA287BA7500086093F /* ContactWS.swift */; };
+		8C2662B0287BAF030086093F /* ContactsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2662AF287BAF030086093F /* ContactsResponse.swift */; };
 		8C3AC186285D69BE00FA6E7A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3AC185285D69BE00FA6E7A /* HomeViewController.swift */; };
 		8C3AC189285D756800FA6E7A /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C3AC188285D756800FA6E7A /* Second.storyboard */; };
 		8C8EF913285C0CFD00B7AEC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C8EF912285C0CFD00B7AEC1 /* GoogleService-Info.plist */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C2662AA287BA7500086093F /* ContactWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactWS.swift; sourceTree = "<group>"; };
+		8C2662AF287BAF030086093F /* ContactsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsResponse.swift; sourceTree = "<group>"; };
 		8C3AC185285D69BE00FA6E7A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8C3AC188285D756800FA6E7A /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 		8C8EF912285C0CFD00B7AEC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -61,6 +65,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C2662A9287BA6F60086093F /* WS */ = {
+			isa = PBXGroup;
+			children = (
+				8C2662AA287BA7500086093F /* ContactWS.swift */,
+			);
+			path = WS;
+			sourceTree = "<group>";
+		};
+		8C2662AE287BAED00086093F /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				8C2662AF287BAF030086093F /* ContactsResponse.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		CAB55B792830BEB200828AD5 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +100,8 @@
 		CAB55B842830BEB200828AD5 /* proyectoCaraLibro */ = {
 			isa = PBXGroup;
 			children = (
+				8C2662AE287BAED00086093F /* DTO */,
+				8C2662A9287BA6F60086093F /* WS */,
 				8C8EF912285C0CFD00B7AEC1 /* GoogleService-Info.plist */,
 				CAB55B852830BEB200828AD5 /* AppDelegate.swift */,
 				CAB55B872830BEB200828AD5 /* SceneDelegate.swift */,
@@ -182,6 +204,8 @@
 			files = (
 				8C8EF917285C25F100B7AEC1 /* FirebaseAuthManager.swift in Sources */,
 				CAB55B862830BEB200828AD5 /* AppDelegate.swift in Sources */,
+				8C2662AB287BA7500086093F /* ContactWS.swift in Sources */,
+				8C2662B0287BAF030086093F /* ContactsResponse.swift in Sources */,
 				CAB55B882830BEB200828AD5 /* SceneDelegate.swift in Sources */,
 				CACA9AE428446086006A5192 /* NewUserViewController.swift in Sources */,
 				8C9FBF90287A57930009F090 /* ContactTableViewCell.swift in Sources */,
