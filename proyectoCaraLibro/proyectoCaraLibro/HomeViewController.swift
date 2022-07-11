@@ -30,17 +30,12 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.setHidesBackButton(true, animated: false)
-        
-        // Guardar datos
-        /*
-        let defaults = UserDefaults.standard
-        defaults.setValue(email, forKey: "email")
-        defaults.synchronize()*/
+       
         
         self.tlvContacts.dataSource = self
         
-        let ws = ContactWS()
-        ws.getAllContacts()
+        //let ws = ContactWS()
+        //ws.getAllContacts()
     }
     
     override func viewWillAppear(_ animated: Bool) {

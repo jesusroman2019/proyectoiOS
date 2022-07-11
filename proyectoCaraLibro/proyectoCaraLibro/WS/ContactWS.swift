@@ -16,22 +16,7 @@ typealias ErrorHandler = (_ errorMessage: String) -> Void
 
 struct ContactWS {
     
-    func getAllContacts() {
-        /*
-        let urlString = "https://proyecto-ios-2022-default-rtdb.firebaseio.com/contactos.json"
-        let request = AF.request(urlString, method: .get)
-        
-        request.response { dataResponse in
-
-            guard let data = dataResponse.data else {
-                completionHandler([])
-                return
-            }
-
-            let decoder = JSONDecoder()
-            let response = try? decoder.decode(PageContactDTO.self, from: data)
-            completionHandler(response?.results ?? [])
-        }*/
+    func getAllContacts(completionHandler: @escaping ContactsHandler) {        
         
         let url = URL(string: "https://proyecto-ios-2022-default-rtdb.firebaseio.com/contactos.json")!
         let request = URLRequest(url: url)
@@ -41,17 +26,17 @@ struct ContactWS {
 
             if error != nil {
                 // Handle HTTP request error
-                //completionHandler([])
+                completionHandler([])
                 return
                 
             } else if let data = data {
                 // Handle HTTP request response
-                //let decoder = JSONDecoder()
-                //let response = try? decoder.decode(PageContactDTO.self, from: data)
-                //completionHandler(response?.results ?? [])
+                let decoder = JSONDecoder()
+                let response = try? decoder.decode(PageContactDTO.self, from: data)
+                completionHandler(response?.results ?? [])
                 
-                let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                print(json ?? "xxxx")
+                //let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                //print(json ?? "xxxx")
             }
         }
         
