@@ -11,9 +11,14 @@
 		8C2662B0287BAF030086093F /* ContactsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2662AF287BAF030086093F /* ContactsResponse.swift */; };
 		8C3AC186285D69BE00FA6E7A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3AC185285D69BE00FA6E7A /* HomeViewController.swift */; };
 		8C3AC189285D756800FA6E7A /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C3AC188285D756800FA6E7A /* Second.storyboard */; };
+		8C4E9ACE287CFB44004CB509 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E9ACD287CFB44004CB509 /* Contact.swift */; };
+		8C4E9AD2287CFE85004CB509 /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E9AD1287CFE85004CB509 /* ErrorTableViewCell.swift */; };
+		8C4E9AD9287D0228004CB509 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E9AD8287D0228004CB509 /* ContactsViewController.swift */; };
+		8C4E9ADD287D0586004CB509 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E9ADC287D0586004CB509 /* ContactTableViewCell.swift */; };
+		8C4E9AE2287D0B05004CB509 /* ListContactsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E9AE1287D0B05004CB509 /* ListContactsAdapter.swift */; };
+		8C4E9AE6287D0CEC004CB509 /* SearchContactsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E9AE5287D0CEC004CB509 /* SearchContactsAdapter.swift */; };
 		8C8EF913285C0CFD00B7AEC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C8EF912285C0CFD00B7AEC1 /* GoogleService-Info.plist */; };
 		8C8EF917285C25F100B7AEC1 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8EF916285C25F100B7AEC1 /* FirebaseAuthManager.swift */; };
-		8C9FBF90287A57930009F090 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9FBF8F287A57930009F090 /* ContactTableViewCell.swift */; };
 		8CB6B4B82861682A00E837FF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8CB6B4B72861682A00E837FF /* FirebaseAnalytics */; };
 		8CB6B4BA2861682A00E837FF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8CB6B4B92861682A00E837FF /* FirebaseStorage */; };
 		8CB6B4BC2861682A00E837FF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8CB6B4BB2861682A00E837FF /* FirebaseAuth */; };
@@ -34,9 +39,14 @@
 		8C2662AF287BAF030086093F /* ContactsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsResponse.swift; sourceTree = "<group>"; };
 		8C3AC185285D69BE00FA6E7A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8C3AC188285D756800FA6E7A /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
+		8C4E9ACD287CFB44004CB509 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		8C4E9AD1287CFE85004CB509 /* ErrorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTableViewCell.swift; sourceTree = "<group>"; };
+		8C4E9AD8287D0228004CB509 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		8C4E9ADC287D0586004CB509 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		8C4E9AE1287D0B05004CB509 /* ListContactsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactsAdapter.swift; sourceTree = "<group>"; };
+		8C4E9AE5287D0CEC004CB509 /* SearchContactsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContactsAdapter.swift; sourceTree = "<group>"; };
 		8C8EF912285C0CFD00B7AEC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C8EF916285C25F100B7AEC1 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
-		8C9FBF8F287A57930009F090 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		CAB55B822830BEB200828AD5 /* proyectoCaraLibro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proyectoCaraLibro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB55B852830BEB200828AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB55B872830BEB200828AD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +91,65 @@
 			path = DTO;
 			sourceTree = "<group>";
 		};
+		8C4E9ACB287CFB11004CB509 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8C4E9ACD287CFB44004CB509 /* Contact.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8C4E9AD0287CFE58004CB509 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				8C4E9AD1287CFE85004CB509 /* ErrorTableViewCell.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		8C4E9AD4287D0175004CB509 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				8C4E9AD5287D0190004CB509 /* Classes */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		8C4E9AD5287D0190004CB509 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8C4E9ADB287D04F0004CB509 /* Contact */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8C4E9AD6287D01A7004CB509 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				8C4E9AE0287D0AC5004CB509 /* Adapters */,
+				8C4E9AD8287D0228004CB509 /* ContactsViewController.swift */,
+				8C4E9ADC287D0586004CB509 /* ContactTableViewCell.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		8C4E9ADB287D04F0004CB509 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				8C4E9AD6287D01A7004CB509 /* List */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		8C4E9AE0287D0AC5004CB509 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				8C4E9AE1287D0B05004CB509 /* ListContactsAdapter.swift */,
+				8C4E9AE5287D0CEC004CB509 /* SearchContactsAdapter.swift */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
 		CAB55B792830BEB200828AD5 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +169,9 @@
 		CAB55B842830BEB200828AD5 /* proyectoCaraLibro */ = {
 			isa = PBXGroup;
 			children = (
+				8C4E9AD4287D0175004CB509 /* iPhone */,
+				8C4E9AD0287CFE58004CB509 /* General */,
+				8C4E9ACB287CFB11004CB509 /* Entities */,
 				8C2662AE287BAED00086093F /* DTO */,
 				8C2662A9287BA6F60086093F /* WS */,
 				8C8EF912285C0CFD00B7AEC1 /* GoogleService-Info.plist */,
@@ -115,7 +187,6 @@
 				8C8EF916285C25F100B7AEC1 /* FirebaseAuthManager.swift */,
 				8C3AC185285D69BE00FA6E7A /* HomeViewController.swift */,
 				8C3AC188285D756800FA6E7A /* Second.storyboard */,
-				8C9FBF8F287A57930009F090 /* ContactTableViewCell.swift */,
 			);
 			path = proyectoCaraLibro;
 			sourceTree = "<group>";
@@ -203,12 +274,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C8EF917285C25F100B7AEC1 /* FirebaseAuthManager.swift in Sources */,
+				8C4E9AD9287D0228004CB509 /* ContactsViewController.swift in Sources */,
 				CAB55B862830BEB200828AD5 /* AppDelegate.swift in Sources */,
 				8C2662AB287BA7500086093F /* ContactWS.swift in Sources */,
+				8C4E9ADD287D0586004CB509 /* ContactTableViewCell.swift in Sources */,
 				8C2662B0287BAF030086093F /* ContactsResponse.swift in Sources */,
 				CAB55B882830BEB200828AD5 /* SceneDelegate.swift in Sources */,
 				CACA9AE428446086006A5192 /* NewUserViewController.swift in Sources */,
-				8C9FBF90287A57930009F090 /* ContactTableViewCell.swift in Sources */,
+				8C4E9ACE287CFB44004CB509 /* Contact.swift in Sources */,
+				8C4E9AE2287D0B05004CB509 /* ListContactsAdapter.swift in Sources */,
+				8C4E9AD2287CFE85004CB509 /* ErrorTableViewCell.swift in Sources */,
+				8C4E9AE6287D0CEC004CB509 /* SearchContactsAdapter.swift in Sources */,
 				CACA9AE028444B20006A5192 /* RecoverPasswordViewController.swift in Sources */,
 				8C3AC186285D69BE00FA6E7A /* HomeViewController.swift in Sources */,
 				CACA9AD4284441A9006A5192 /* LoginUserViewController.swift in Sources */,

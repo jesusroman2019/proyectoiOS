@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-1114" y="49"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Contacts View Controller-->
         <scene sceneID="Hxu-Hc-GgC">
             <objects>
-                <viewController storyboardIdentifier="contactos" id="LWa-jd-X59" customClass="HomeViewController" customModule="proyectoCaraLibro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="contactos" id="LWa-jd-X59" customClass="ContactsViewController" customModule="proyectoCaraLibro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cqw-O9-9nP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pepito" id="6TM-jG-N37">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactTableViewCell" id="6TM-jG-N37" customClass="ContactTableViewCell" customModule="proyectoCaraLibro" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="164"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6TM-jG-N37" id="CQh-PA-Smo">
@@ -102,8 +102,12 @@
                                                 <constraint firstItem="Nic-Ed-dAO" firstAttribute="top" secondItem="VJD-Nx-pjB" secondAttribute="top" id="xdC-k4-IJE"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgContact" destination="VJD-Nx-pjB" id="wmm-Wu-DLr"/>
+                                            <outlet property="lblName" destination="Nic-Ed-dAO" id="So2-ai-mno"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="212" id="qd2-ph-NK2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ErrorTableViewCell" rowHeight="212" id="qd2-ph-NK2" customClass="ErrorTableViewCell" customModule="proyectoCaraLibro" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="192" width="414" height="212"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qd2-ph-NK2" id="awe-fn-OAE">
@@ -137,6 +141,9 @@
                                                 <constraint firstItem="j2s-K4-9it" firstAttribute="centerY" secondItem="awe-fn-OAE" secondAttribute="centerY" id="cQz-zv-70X"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblErrorMessage" destination="gja-6x-osT" id="cGG-J7-qJC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -185,7 +192,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="closeSessionButtonAction:" destination="LWa-jd-X59" eventType="touchUpInside" id="3fO-e8-nWL"/>
+                                            <action selector="closeSessionButtonAction:" destination="LWa-jd-X59" eventType="touchUpInside" id="Oop-xi-Grd"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -217,8 +224,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="NcA-aI-Zhf"/>
                     <connections>
-                        <outlet property="closeButton" destination="QWa-kW-m5u" id="jQt-Wc-xgA"/>
-                        <outlet property="tlvContacts" destination="Ngr-9a-acw" id="niq-Q6-Gah"/>
+                        <outlet property="closeButton" destination="QWa-kW-m5u" id="Xe4-Kz-9YE"/>
+                        <outlet property="srcContacts" destination="dWP-j2-Vfp" id="3aN-aC-KrT"/>
+                        <outlet property="tlvContacts" destination="Ngr-9a-acw" id="r8z-c8-HWM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hs5-uC-SFs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
