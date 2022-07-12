@@ -17,6 +17,7 @@
 		8C4E9ADD287D0586004CB509 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E9ADC287D0586004CB509 /* ContactTableViewCell.swift */; };
 		8C4E9AE2287D0B05004CB509 /* ListContactsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E9AE1287D0B05004CB509 /* ListContactsAdapter.swift */; };
 		8C4E9AE6287D0CEC004CB509 /* SearchContactsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E9AE5287D0CEC004CB509 /* SearchContactsAdapter.swift */; };
+		8C4E9AEC287D2034004CB509 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E9AEB287D2034004CB509 /* ContactDetailViewController.swift */; };
 		8C8EF913285C0CFD00B7AEC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C8EF912285C0CFD00B7AEC1 /* GoogleService-Info.plist */; };
 		8C8EF917285C25F100B7AEC1 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8EF916285C25F100B7AEC1 /* FirebaseAuthManager.swift */; };
 		8CB6B4B82861682A00E837FF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8CB6B4B72861682A00E837FF /* FirebaseAnalytics */; };
@@ -45,6 +46,7 @@
 		8C4E9ADC287D0586004CB509 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		8C4E9AE1287D0B05004CB509 /* ListContactsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactsAdapter.swift; sourceTree = "<group>"; };
 		8C4E9AE5287D0CEC004CB509 /* SearchContactsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContactsAdapter.swift; sourceTree = "<group>"; };
+		8C4E9AEB287D2034004CB509 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		8C8EF912285C0CFD00B7AEC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C8EF916285C25F100B7AEC1 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		CAB55B822830BEB200828AD5 /* proyectoCaraLibro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proyectoCaraLibro.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 		8C4E9ADB287D04F0004CB509 /* Contact */ = {
 			isa = PBXGroup;
 			children = (
+				8C4E9AEA287D1FFD004CB509 /* Detail */,
 				8C4E9AD6287D01A7004CB509 /* List */,
 			);
 			path = Contact;
@@ -148,6 +151,14 @@
 				8C4E9AE5287D0CEC004CB509 /* SearchContactsAdapter.swift */,
 			);
 			path = Adapters;
+			sourceTree = "<group>";
+		};
+		8C4E9AEA287D1FFD004CB509 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8C4E9AEB287D2034004CB509 /* ContactDetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		CAB55B792830BEB200828AD5 = {
@@ -287,6 +298,7 @@
 				8C4E9AE6287D0CEC004CB509 /* SearchContactsAdapter.swift in Sources */,
 				CACA9AE028444B20006A5192 /* RecoverPasswordViewController.swift in Sources */,
 				8C3AC186285D69BE00FA6E7A /* HomeViewController.swift in Sources */,
+				8C4E9AEC287D2034004CB509 /* ContactDetailViewController.swift in Sources */,
 				CACA9AD4284441A9006A5192 /* LoginUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

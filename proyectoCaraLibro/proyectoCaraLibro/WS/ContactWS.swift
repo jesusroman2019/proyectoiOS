@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 
 typealias ContactsHandler = (_ arrayContactsDTO: [ContactDTO]) -> Void
-//typealias ContactHandler = (_ contactDTO: ContactDTO) -> Void
+typealias ContactHandler = (_ contactDTO: ContactDTO) -> Void
 typealias ErrorHandler = (_ errorMessage: String) -> Void
 
 struct ContactWS {
@@ -43,28 +43,39 @@ struct ContactWS {
         task.resume()
         
     }
-    /*
+    
     func getDetailById(_ idContact: String, success: @escaping ContactHandler, error: @escaping ErrorHandler) {
         
-        let urlString = "https://api.themoviedb.org/3/movie/\(idMovie)?api_key=752cd23fdb3336557bf3d8724e115570&language=es"
-        let request = AF.request(urlString, method: .get)
+        //let urlString = "https://api.themoviedb.org/3/movie/\(idContact)?api_key=752cd23fdb3336557bf3d8724e115570&language=es"
+        let url = URL(string: "https://api.themoviedb.org/3/movie/\(idContact)?api_key=752cd23fdb3336557bf3d8724e115570&language=es")!
+        let request = URLRequest(url: url)
         
-        request.response { dataResponse in
+        let session = URLSession.shared
+        let task = session.dataTask(with: request) { (data, response, error) in
 
-            guard let data = dataResponse.data else {
-                error("Error en la conexión de internet")
+            if error != nil {
+                // Handle HTTP request error
+                //error("Error en la conexión de internet")
+                print("Error en la conexión de internet")
                 return
+                
+            } else if let data = data {
+                // Handle HTTP request response
+                let decoder = JSONDecoder()
+                let response = try? decoder.decode(ContactDTO.self, from: data)
+                
+                guard response != nil else {
+                    //error("No se puede leer la información recibida. Intentalo más tarde.")
+                    print("No se puede leer la información recibida. Intentalo más tarde.")
+                    return
+                }
+                
+                //let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                //print(json ?? "xxxx")
             }
-            
-            let decoder = JSONDecoder()
-            let response = try? decoder.decode(ContactDTO.self, from: data)
-            
-            guard let response1 = response else {
-                error("No se puede leer la información recibida. Intentalo más tarde.")
-                return
-            }
-            
-            success(response)
         }
-    }*/
+        
+        task.resume()
+        
+    }
 }

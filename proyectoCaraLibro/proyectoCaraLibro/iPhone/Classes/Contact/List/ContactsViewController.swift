@@ -49,7 +49,7 @@ class ContactsViewController: UIViewController {
         //navigationItem.setHidesBackButton(true, animated: false)
        
         
-        self.tlvContacts.dataSource = self
+        //self.tlvContacts.dataSource = self
     }
     
     @objc private func pullToRefresh(_ refreshControl: UIRefreshControl) {

@@ -233,10 +233,10 @@
             </objects>
             <point key="canvasLocation" x="-349.27536231884062" y="43.526785714285715"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact Detail View Controller-->
         <scene sceneID="StS-Gc-Ji6">
             <objects>
-                <viewController id="13a-TT-Fp4" sceneMemberID="viewController">
+                <viewController id="13a-TT-Fp4" customClass="ContactDetailViewController" customModule="proyectoCaraLibro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tNz-mn-QOu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -251,6 +251,9 @@
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="chevron.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="clickBtnBack1:" destination="13a-TT-Fp4" eventType="touchUpInside" id="U8m-u3-vBC"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idq-WU-MVH">
                                         <rect key="frame" x="182" y="10" width="50" height="24"/>
@@ -367,6 +370,14 @@
                             <constraint firstItem="O3w-XB-zib" firstAttribute="trailing" secondItem="iXX-dc-LPw" secondAttribute="trailing" id="xc1-cE-FMG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgContact" destination="7wt-Yv-GvG" id="5c6-5r-Yys"/>
+                        <outlet property="lblEmail" destination="0Yr-Hr-N7i" id="Cps-4I-obz"/>
+                        <outlet property="lblLastName" destination="gmK-cK-K4u" id="Mfz-gI-E0e"/>
+                        <outlet property="lblName" destination="kfK-5p-S6q" id="V8m-dn-QJ1"/>
+                        <outlet property="lblPhone" destination="qDj-PM-4BR" id="nue-mh-RHP"/>
+                        <outlet property="scrollContent" destination="aLN-7q-63T" id="eB0-Bg-jhk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cF7-zt-hY2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
