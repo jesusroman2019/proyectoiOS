@@ -80,7 +80,7 @@ extension ContactDetailViewController {
     
     class func buildWithIdContact(_ idContact: String) -> ContactDetailViewController {
         
-        let storyboard = UIStoryboard(name: "Contact", bundle: nil)
+        let storyboard = UIStoryboard(name: "Second", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "ContactDetailViewController") as? ContactDetailViewController
         controller?.idContact = idContact
         
