@@ -26,14 +26,20 @@ struct ContactWS {
 
             if error != nil {
                 // Handle HTTP request error
-                completionHandler([])
+                DispatchQueue.main.async {
+                    completionHandler([])
+                }
+                
                 return
                 
             } else if let data = data {
                 // Handle HTTP request response
                 let decoder = JSONDecoder()
                 let response = try? decoder.decode(PageContactDTO.self, from: data)
-                completionHandler(response?.results ?? [])
+                DispatchQueue.main.async {
+                    completionHandler(response?.results ?? [])
+                }
+                
                 
                 //let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
                 //print(json ?? "xxxx")
