@@ -31,35 +31,40 @@ class ContactDetailViewController: UIViewController {
     
     private func updateData(_ contact: Contact) {
         
-        self.lblName.text = contact.nombre
-        self.lblLastName.text = contact.apellidos
-        self.lblEmail.text = contact.correo
-        self.lblPhone.text = String(contact.telefono)
+        DispatchQueue.main.async {
+            
+            self.lblName.text = contact.nombre
+            self.lblLastName.text = contact.apellidos
+            self.lblEmail.text = contact.correo
+            self.lblPhone.text = String(contact.telefono)
 
-        let url = URL(string: contact.url)!
-        let request = URLRequest(url: url)
-        
-        // Create the HTTP request
-        let session = URLSession.shared
-        let task = session.dataTask(with: request) { (data, response, error) in
+            let url = URL(string: contact.url)!
+            let request = URLRequest(url: url)
+            
+            // Create the HTTP request
+            let session = URLSession.shared
+            let task = session.dataTask(with: request) { (data, response, error) in
 
-            if error != nil {
-                // Handle HTTP request error
-                return
-            } else if data != nil {
-                // Handle HTTP request response
-                DispatchQueue.global().async { [weak self] in
-                            if let data = try? Data(contentsOf: url) {
-                                if let image = UIImage(data: data) {
-                                    DispatchQueue.main.async {
-                                        self?.imgContact.image = image
+                if error != nil {
+                    // Handle HTTP request error
+                    return
+                } else if data != nil {
+                    // Handle HTTP request response
+                    DispatchQueue.global().async { [weak self] in
+                                if let data = try? Data(contentsOf: url) {
+                                    if let image = UIImage(data: data) {
+                                        DispatchQueue.main.async {
+                                            self?.imgContact.image = image
+                                        }
                                     }
                                 }
-                            }
-                        }            }
-                        
+                            }            }
+                            
+            }
+            task.resume()
+            
         }
-        task.resume()
+        
         /*
         let request = AF.request(movie.urlImage)
         request.response { dataResponse in
@@ -94,7 +99,12 @@ class ContactDetailViewController: UIViewController {
     }
     
     private func showLoading(_ isLoading: Bool) {
-        self.scrollContent.isHidden = isLoading
+        //self.scrollContent.isHidden = isLoading
+        
+        DispatchQueue.main.async {
+            self.scrollContent.isHidden = isLoading
+        }
+        
     }
 }
 

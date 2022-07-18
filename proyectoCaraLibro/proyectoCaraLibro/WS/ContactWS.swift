@@ -54,10 +54,14 @@ struct ContactWS {
         
         //let urlString = "https://api.themoviedb.org/3/movie/\(idContact)?api_key=752cd23fdb3336557bf3d8724e115570&language=es"
         
-        let url = URL(string: """
+        let urlString = """
                                 https://proyecto-ios-2022-default-rtdb.firebaseio.com/contactos/results.json?orderBy="uid"&equalTo=\(idContact)
-                                """)!
+                                """
         
+        let encodedStr = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        let url = URL(string: encodedStr)!
+        
+                
         let request = URLRequest(url: url)
         
         let session = URLSession.shared
@@ -80,6 +84,7 @@ struct ContactWS {
                     return
                 }
                 
+                success(response!)
                 //let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
                 //print(json ?? "xxxx")
             }
