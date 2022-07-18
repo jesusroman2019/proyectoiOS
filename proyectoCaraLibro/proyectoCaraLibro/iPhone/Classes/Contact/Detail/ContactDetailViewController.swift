@@ -36,8 +36,30 @@ class ContactDetailViewController: UIViewController {
         self.lblEmail.text = contact.correo
         self.lblPhone.text = String(contact.telefono)
 
+        let url = URL(string: contact.url)!
+        let request = URLRequest(url: url)
         
-        
+        // Create the HTTP request
+        let session = URLSession.shared
+        let task = session.dataTask(with: request) { (data, response, error) in
+
+            if error != nil {
+                // Handle HTTP request error
+                return
+            } else if data != nil {
+                // Handle HTTP request response
+                DispatchQueue.global().async { [weak self] in
+                            if let data = try? Data(contentsOf: url) {
+                                if let image = UIImage(data: data) {
+                                    DispatchQueue.main.async {
+                                        self?.imgContact.image = image
+                                    }
+                                }
+                            }
+                        }            }
+                        
+        }
+        task.resume()
         /*
         let request = AF.request(movie.urlImage)
         request.response { dataResponse in

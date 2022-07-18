@@ -49,11 +49,15 @@ struct ContactWS {
         task.resume()
         
     }
-    
+
     func getDetailById(_ idContact: String, success: @escaping ContactHandler, error: @escaping ErrorHandler) {
         
         //let urlString = "https://api.themoviedb.org/3/movie/\(idContact)?api_key=752cd23fdb3336557bf3d8724e115570&language=es"
-        let url = URL(string: "https://api.themoviedb.org/3/movie/\(idContact)?api_key=752cd23fdb3336557bf3d8724e115570&language=es")!
+        
+        let url = URL(string: """
+                                https://proyecto-ios-2022-default-rtdb.firebaseio.com/contactos/results.json?orderBy="uid"&equalTo=\(idContact)
+                                """)!
+        
         let request = URLRequest(url: url)
         
         let session = URLSession.shared
