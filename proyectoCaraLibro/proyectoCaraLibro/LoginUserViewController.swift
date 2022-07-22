@@ -55,7 +55,7 @@ class LoginUserViewController: UIViewController, UITextFieldDelegate{
                         if let result = result, error == nil {
                             
                             let storyBoard : UIStoryboard = UIStoryboard(name: "Second", bundle:nil)
-                            let resultViewController = storyBoard.instantiateViewController(withIdentifier: "contactos") as! HomeViewController
+                            let resultViewController = storyBoard.instantiateViewController(withIdentifier: "contactos") as! ContactsViewController
                             self.navigationController?
                                 .pushViewController(resultViewController, animated: true)
                                 print(result)

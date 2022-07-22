@@ -85,8 +85,8 @@ struct ContactWS {
                 }
                 
                 success(response!)
-                //let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                //print(json ?? "xxxx")
+                let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                print(json ?? "xxxx")
             }
         }
         

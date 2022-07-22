@@ -14,6 +14,11 @@ class ContactsViewController: UIViewController {
     @IBOutlet private weak var tlvContacts: UITableView!
     @IBOutlet private weak var srcContacts: UISearchBar!
     
+    @IBAction private func tapToCloseKeyboard(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+
+    }
+
     @IBAction func closeSessionButtonAction(_ sender: Any){
         
         do {
@@ -51,7 +56,8 @@ class ContactsViewController: UIViewController {
         
         //self.tlvContacts.dataSource = self
     }
-    
+        
+
     @objc private func pullToRefresh(_ refreshControl: UIRefreshControl) {
         self.getAllContacts()
     }
@@ -74,7 +80,7 @@ class ContactsViewController: UIViewController {
     
     private func setupAdapters() {
         self.tlvContacts.dataSource = self.listAdapter
-        self.tlvContacts.delegate = self.listAdapter
+        //self.tlvContacts.delegate = self.listAdapter
         self.srcContacts.delegate = self.searchAdapter
     }
     
@@ -82,9 +88,22 @@ class ContactsViewController: UIViewController {
         self.listAdapter.arrayData = arrayData
         self.tlvContacts.reloadData()
     }
-    
+    /*
     func openDetailContact(_ contact: Contact) {
         let controller = ContactDetailViewController.buildWithIdContact(contact.uid)
         self.navigationController?.pushViewController(controller, animated: true)
+    }*/
+    
+        
+    
+    
+    func showChatController(_ contact: Contact) {
+        let controller = ChatLogController.buildWithIdContact(contact.uid)
+        //let controller = ChatLogController(collectionViewLayout: UICollectionViewFlowLayout())
+        navigationController?.pushViewController(controller, animated: true)
+        print(123)
     }
+    
 }
+
+

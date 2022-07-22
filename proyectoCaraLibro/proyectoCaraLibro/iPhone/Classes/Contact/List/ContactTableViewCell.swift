@@ -10,6 +10,8 @@ import UIKit
 class ContactTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var lblName: UILabel!
+    @IBOutlet private weak var lblLastName: UILabel!
+    @IBOutlet private weak var lblEmail: UILabel!
     @IBOutlet private weak var imgContact: UIImageView!
     
     
@@ -18,7 +20,9 @@ class ContactTableViewCell: UITableViewCell {
         self.animateAppear()
         
         self.lblName.text = contact.nombre
-                
+        self.lblLastName.text = contact.apellidos
+        self.lblEmail.text = contact.correo
+        
         /*
         let request = AF.request(movie.urlImage)
         request.response { dataResponse in

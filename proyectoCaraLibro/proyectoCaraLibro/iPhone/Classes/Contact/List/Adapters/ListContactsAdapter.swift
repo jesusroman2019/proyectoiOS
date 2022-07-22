@@ -38,7 +38,7 @@ extension ListContactsAdapter: UITableViewDataSource {
         }
     }
 }
-
+/*
 extension ListContactsAdapter: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -46,7 +46,8 @@ extension ListContactsAdapter: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         if let objContact = self.arrayData[indexPath.row] as? Contact {
-            self.controller.openDetailContact(objContact)
+            //self.controller.openDetailContact(objContact)
+            self.controller.openChatContact(objContact)
         }
     }
     
@@ -61,4 +62,4 @@ extension ListContactsAdapter: UITableViewDelegate {
             return 0
         }
     }
-}
+}*/
